@@ -234,11 +234,11 @@ def GoFish():
     input()
     endtime=time.time()
     if(int(10-(modifier*abs(8-round(endtime-starttime)))) < 1):
-      addstuff("Raw Food",1)
-      print("You get 1 Raw Food!")
+        addstuff("Raw Food",1)
+        print("You get 1 Raw Food!")
     else:
-      addstuff("Raw Food",int(10-(modifier*abs(8-round(endtime-starttime)))))
-      print("You get "+int_to_en(int(10-(modifier*abs(8-round(endtime-starttime)))))+" Raw Food!")
+        addstuff("Raw Food",int(10-(modifier*abs(8-round(endtime-starttime)))))
+        print("You get "+int_to_en(int(10-(modifier*abs(8-round(endtime-starttime)))))+" Raw Food!")
     if(random.random()>modifier*0.1*(abs(8-round(endtime-starttime)))):
         defaultlootable()
 def tictac(ai):
@@ -448,19 +448,19 @@ def endgame():
         alive = 0
 def int_to_en(num):
     d = { 0 : 'zero', 1 : 'one', 2 : 'two', 3 : 'three', 4 : 'four', 5 : 'five',
-          6 : 'six', 7 : 'seven', 8 : 'eight', 9 : 'nine', 10 : 'ten',
-          11 : 'eleven', 12 : 'twelve', 13 : 'thirteen', 14 : 'fourteen',
-          15 : 'fifteen', 16 : 'sixteen', 17 : 'seventeen', 18 : 'eighteen',
-          19 : 'nineteen', 20 : 'twenty',
-          30 : 'thirty', 40 : 'forty', 50 : 'fifty', 60 : 'sixty',
-          70 : 'seventy', 80 : 'eighty', 90 : 'ninety' }
+        6 : 'six', 7 : 'seven', 8 : 'eight', 9 : 'nine', 10 : 'ten',
+        11 : 'eleven', 12 : 'twelve', 13 : 'thirteen', 14 : 'fourteen',
+        15 : 'fifteen', 16 : 'sixteen', 17 : 'seventeen', 18 : 'eighteen',
+        19 : 'nineteen', 20 : 'twenty',
+        30 : 'thirty', 40 : 'forty', 50 : 'fifty', 60 : 'sixty',
+        70 : 'seventy', 80 : 'eighty', 90 : 'ninety' }
     k = 1000
     m = k * 1000
     b = m * 1000
     t = b * 1000
     q = t * 1000
     if (num < 0):
-      return "negative "+int_to_en(-1*num)
+        return "negative "+int_to_en(-1*num)
     if (num < 20):
         return d[num]
     if (num < 100):
@@ -514,43 +514,43 @@ def getinvalid(array):
             i+=1
 shopfeel=0
 def cancercheck():
-  if(inventory[finditem("Cancer")][1] > 100-(modifier*1)):
-    print("The cancer is incredibly close to killing you")
-  elif(inventory[finditem("Cancer")][1] > 100-(modifier*2)):
-    print("The cancer is close to killing you")
-  elif(inventory[finditem("Cancer")][1] > 100-(modifier*3)):
-    print("The cancer severly thretends your immediate survival")
-  elif(inventory[finditem("Cancer")][1] > 100-(modifier*4)):
-    print("The cancer threatends your immediate survival")
-  elif(inventory[finditem("Cancer")][1] > 100-(modifier*5)):
-    print("The cancer slightly threatends your immediate survival")
-  elif(inventory[finditem("Cancer")][1] > 100-(modifier*6)):
-    print("The cancer is beging to threaten your immediate survival")
-  elif(inventory[finditem("Cancer")][1] > 100-(modifier*7)):
-    print("The cancer is incredibly close to threatening your immediate survival")
-  elif(inventory[finditem("Cancer")][1] > 100-(modifier*8)):
-    print("The cancer is close to threatening your immediate survival")
-  elif(inventory[finditem("Cancer")][1] > 100-(modifier*9)):
-    print("The cancer is slightly close to threatening your immediate survival")
-  elif(inventory[finditem("Cancer")][1] > 100-(modifier*10)):
-    print("The cancer is growing incredibly large, Soon it will threaten your immediate survival")
-  elif(inventory[finditem("Cancer")][1] > 100-(modifier*11)):
-    print("The cancer is growing large, Soon it will threaten your immediate survival")
-  elif(inventory[finditem("Cancer")][1] > 100-(modifier*12)):
-    print("The cancer is almost growing large, Soon it will threaten your immediate survival")
-  elif(inventory[finditem("Cancer")][1] > 100-(modifier*13)):
-    print("The cancer is medium sized, holding no immidetly threat to your survival, but it could get worse fast")
-  elif(inventory[finditem("Cancer")][1] > 100-(modifier*14)):
-    print("The cancer is almost medium sized, holding no immidetly threat to your survival, but it could get worse fast")
-  elif(inventory[finditem("Cancer")][1] > 100-(modifier*15)):
-    print("The cancer is small sized, but it shows signs of getting bigger")
-  elif(inventory[finditem("Cancer")][1] > 100-(modifier*16)):
-    print("The cancer is very small sized, but it shows signs of getting bigger")
-  elif(inventory[finditem("Cancer")][1] > 100-(modifier*17)):
-    print("The cancer is tiny sized, but it shows signs of getting bigger")
-  elif(inventory[finditem("Cancer")][1] > 100-(modifier*18)):
-    print("The cancer is very tiny sized right now. However, there is always the chance it gets larger.")
-  else:
+    if(inventory[finditem("Cancer")][1] > 100-(modifier*1)):
+        print("The cancer is incredibly close to killing you")
+    elif(inventory[finditem("Cancer")][1] > 100-(modifier*2)):
+        print("The cancer is close to killing you")
+    elif(inventory[finditem("Cancer")][1] > 100-(modifier*3)):
+        print("The cancer severly thretends your immediate survival")
+    elif(inventory[finditem("Cancer")][1] > 100-(modifier*4)):
+        print("The cancer threatends your immediate survival")
+    elif(inventory[finditem("Cancer")][1] > 100-(modifier*5)):
+        print("The cancer slightly threatends your immediate survival")
+    elif(inventory[finditem("Cancer")][1] > 100-(modifier*6)):
+        print("The cancer is beging to threaten your immediate survival")
+    elif(inventory[finditem("Cancer")][1] > 100-(modifier*7)):
+        print("The cancer is incredibly close to threatening your immediate survival")
+    elif(inventory[finditem("Cancer")][1] > 100-(modifier*8)):
+        print("The cancer is close to threatening your immediate survival")
+    elif(inventory[finditem("Cancer")][1] > 100-(modifier*9)):
+        print("The cancer is slightly close to threatening your immediate survival")
+    elif(inventory[finditem("Cancer")][1] > 100-(modifier*10)):
+        print("The cancer is growing incredibly large, Soon it will threaten your immediate survival")
+    elif(inventory[finditem("Cancer")][1] > 100-(modifier*11)):
+        print("The cancer is growing large, Soon it will threaten your immediate survival")
+    elif(inventory[finditem("Cancer")][1] > 100-(modifier*12)):
+        print("The cancer is almost growing large, Soon it will threaten your immediate survival")
+    elif(inventory[finditem("Cancer")][1] > 100-(modifier*13)):
+        print("The cancer is medium sized, holding no immidetly threat to your survival, but it could get worse fast")
+    elif(inventory[finditem("Cancer")][1] > 100-(modifier*14)):
+        print("The cancer is almost medium sized, holding no immidetly threat to your survival, but it could get worse fast")
+    elif(inventory[finditem("Cancer")][1] > 100-(modifier*15)):
+        print("The cancer is small sized, but it shows signs of getting bigger")
+    elif(inventory[finditem("Cancer")][1] > 100-(modifier*16)):
+        print("The cancer is very small sized, but it shows signs of getting bigger")
+    elif(inventory[finditem("Cancer")][1] > 100-(modifier*17)):
+        print("The cancer is tiny sized, but it shows signs of getting bigger")
+    elif(inventory[finditem("Cancer")][1] > 100-(modifier*18)):
+        print("The cancer is very tiny sized right now. However, there is always the chance it gets larger.")
+    else:
     print("the cancer might not even exist right now it is so small, however cancer has a tendancy to grow fast. When it does, It will not be mercyfull")
 def shopkeep():
     global shopfeel
@@ -775,21 +775,21 @@ def bloodloss(hours):
             inventory[finditem("Blood")][1] = inventory[finditem("Blood")][1] - (inventory[finditem("Open Wound")][1] * modifier * hours * ((inventory[finditem("curse of bloodloss")][1])))  
     
     if(finditem("Infection") != -1 and inventory[finditem("Infection")][1] >= 1):
-      if(inventory[finditem("Blood")][1]<100-inventory[finditem("Infection")][1] and inventory[finditem("Blood")][1]<=100-inventory[finditem("Infection")][1]-round(10/modifier)):
-          inventory[finditem("Blood")][1]+=round(10/modifier)
-      elif(inventory[finditem("Blood")][1]>110-inventory[finditem("Infection")][1]):
-          print("The amount of blood you have isn't healthy, you get a wound")
-          addstuff("Open Wound",math.floor((inventory[finditem("Blood")][1]-(100-inventory[finditem("Infection")][1]))/10))
-      elif(inventory[finditem("Blood")][1]>=100-inventory[finditem("Infection")][1]-round(10/modifier)):
-          inventory[finditem("Blood")][1] = 100-inventory[finditem("Infection")][1]
+        if(inventory[finditem("Blood")][1]<100-inventory[finditem("Infection")][1] and inventory[finditem("Blood")][1]<=100-inventory[finditem("Infection")][1]-round(10/modifier)):
+            inventory[finditem("Blood")][1]+=round(10/modifier)
+        elif(inventory[finditem("Blood")][1]>110-inventory[finditem("Infection")][1]):
+            print("The amount of blood you have isn't healthy, you get a wound")
+            addstuff("Open Wound",math.floor((inventory[finditem("Blood")][1]-(100-inventory[finditem("Infection")][1]))/10))
+        elif(inventory[finditem("Blood")][1]>=100-inventory[finditem("Infection")][1]-round(10/modifier)):
+            inventory[finditem("Blood")][1] = 100-inventory[finditem("Infection")][1]
     else:
-      if(inventory[finditem("Blood")][1]<100 and inventory[finditem("Blood")][1]<=100-round(10/modifier)):
-          inventory[finditem("Blood")][1]+=round(10/modifier)
-      elif(inventory[finditem("Blood")][1]>110):
-          print("The amount of blood you have isn't healthy, you get a wound")
-          addstuff("Open Wound",math.floor((inventory[finditem("Blood")][1]-100)/10))
-      elif(inventory[finditem("Blood")][1]>=100-round(10/modifier)):
-          inventory[finditem("Blood")][1] = 100
+        if(inventory[finditem("Blood")][1]<100 and inventory[finditem("Blood")][1]<=100-round(10/modifier)):
+            inventory[finditem("Blood")][1]+=round(10/modifier)
+        elif(inventory[finditem("Blood")][1]>110):
+            print("The amount of blood you have isn't healthy, you get a wound")
+            addstuff("Open Wound",math.floor((inventory[finditem("Blood")][1]-100)/10))
+        elif(inventory[finditem("Blood")][1]>=100-round(10/modifier)):
+            inventory[finditem("Blood")][1] = 100
 def passtime(hours):
     global totalhours
     totalhours+=hours
@@ -808,12 +808,12 @@ def passtime(hours):
             FoodModifier = 1
             WaterModifier = 1
             if(finditem("curse of hunger")!=-1 and inventory[finditem("curse of hunger")][1]>=1):
-              FoodModifier=FoodModifier+inventory[finditem("curse of hunger")][1]
+                FoodModifier=FoodModifier+inventory[finditem("curse of hunger")][1]
             if(finditem("curse of thirst")!=-1 and inventory[finditem("curse of thirst")][1]>=1):
-              WaterModifier=WaterModifier+inventory[finditem("curse of thirst")][1]
+                WaterModifier=WaterModifier+inventory[finditem("curse of thirst")][1]
             if(finditem("Venom")!=-1 and inventory[finditem("Venom")][1]>=1):
-              WaterModifier=WaterModifier+inventory[finditem("Venom")][1]
-              FoodModifier=FoodModifier+inventory[finditem("Venom")][1]
+                WaterModifier=WaterModifier+inventory[finditem("Venom")][1]
+                FoodModifier=FoodModifier+inventory[finditem("Venom")][1]
             
             inventory[finditem("Water")][1] = inventory[finditem("Water")][1] - ((1/10)*modifier*WaterModifier)
             inventory[finditem("Food")][1] = inventory[finditem("Food")][1] - ((1/10)*modifier*FoodModifier)
@@ -875,32 +875,32 @@ def passtime(hours):
             wounds = 0
             for i in range(int(modifier)):
                 if(0.005>random.random()):
-                  wounds=wounds+1
+                    wounds=wounds+1
                 if(0.001>random.random()):
-                  rad = 0;
-                  if(finditem("Radiation Suit") == -1 or inventory[finditem("Radiation Suit")][1] <= 0):
-                    rad+=1
-                  if(finditem("Makeshift Radiation Suit") == -1 or inventory[finditem("Makeshift Radiation Suit")][1] <= 0):
-                    rad+=2
-                  if(finditem("Geiger Counter") == -1 or inventory[finditem("Geiger Counter")][1] <= 0):
-                    rad=rad*2
-                  else:
-                    print("Your geiger counter clicks vigerously, as you quickly leave an area")
-                  addstuff("Radiation",rad)
+                    rad = 0;
+                    if(finditem("Radiation Suit") == -1 or inventory[finditem("Radiation Suit")][1] <= 0):
+                        rad+=1
+                    if(finditem("Makeshift Radiation Suit") == -1 or inventory[finditem("Makeshift Radiation Suit")][1] <= 0):
+                        rad+=2
+                    if(finditem("Geiger Counter") == -1 or inventory[finditem("Geiger Counter")][1] <= 0):
+                        rad=rad*2
+                    else:
+                        print("Your geiger counter clicks vigerously, as you quickly leave an area")
+                    addstuff("Radiation",rad)
                 if(0.002>random.random()):
-                  entercombat("@",0);
+                    entercombat("@",0);
                 if(0.005>random.random()):
-                  global x
-                  global y
-                  lost=False;
-                  if(x>0 and x<width-1):
-                    lost = True;
-                    x+=round(random.random()*2-1)
-                  if(y>0 and y<height-1):
-                    lost = True;
-                    y+=round(random.random()*2-1)
-                  if(lost):
-                    print("You get lost")
+                    global x
+                    global y
+                    lost=False;
+                    if(x>0 and x<width-1):
+                        lost = True;
+                        x+=round(random.random()*2-1)
+                    if(y>0 and y<height-1):
+                        lost = True;
+                        y+=round(random.random()*2-1)
+                    if(lost):
+                        print("You get lost")
                 if(finditem("curse of haunting")!=-1 and inventory[finditem("curse of haunting")][1]>=1):
                     for i in range(int(inventory[finditem("curse of haunting")][1])):
                         if(0.01>random.random()):
@@ -917,24 +917,24 @@ def passtime(hours):
                           print("Your cancer spreads")
                           addstuff("Cancer",1)
             if(wounds>0):
-              addwound(wounds)
+                addwound(wounds)
             deathcheck()
 def deathcheck():
     getinvalid(inventory)
     global alive
     if(alive == 1):
-      if(finditem("Cancer")!=-1 and inventory[finditem("Cancer")][1] >= 100):
-          alive=0
-          print("You died, Your cancer killed you")
-      elif(finditem("Blood")==-1 or inventory[finditem("Blood")][1] <= 0):
-          alive=0
-          print("You died, You ran out of blood")
-      elif(finditem("Food")==-1 or inventory[finditem("Food")][1] <= 0):
-          alive=0
-          print("You died, You ran out of food")
-      elif(finditem("Water")==-1 or inventory[finditem("Water")][1] <= 0):
-          alive=0
-          print("You died, You ran out of water")
+        if(finditem("Cancer")!=-1 and inventory[finditem("Cancer")][1] >= 100):
+            alive=0
+            print("You died, Your cancer killed you")
+        elif(finditem("Blood")==-1 or inventory[finditem("Blood")][1] <= 0):
+            alive=0
+            print("You died, You ran out of blood")
+        elif(finditem("Food")==-1 or inventory[finditem("Food")][1] <= 0):
+            alive=0
+            print("You died, You ran out of food")
+        elif(finditem("Water")==-1 or inventory[finditem("Water")][1] <= 0):
+            alive=0
+            print("You died, You ran out of water")
     if(alive==0 and finditem("Death Amulet")!=-1 and inventory[finditem("Dark Amulet")][1] > 0):
             inventory[finditem("Death Amulet")][1]-=1
             print("You feel the Death Amulet shake...")
@@ -982,65 +982,65 @@ def deathcheck():
             alive=1
             getinventory()
 def traveler():
-  print("You see something approach from the distance")
-  print("                                          ")
-  print("        /\/\/\/\/\/\/\/\/\ ")
-  print("        {|   / \   / \  |}")
-  print("        {|  | + | | + | |}")
-  print("        {|   \_/   \_/  |}")
-  print("        /        #       \ ")
-  print("        |     \_____/    |")
-  print("        \                /")
-  print("         +--------------+")
-  print("          ::::::::::::::")
-  print()
-  print("            ::::::::::")
-  print()
-  print("              ::::::")
-  print()
-  print("Hello! I am a fellow human. Look at me human all over the place")
-  print("How are you doing fellow human?")
-  input()
-  print("I probally feel the same fellow human")
-  if(finditem("curse of insanity")!=-1 and inventory[finditem("curse of insanity")][1] <= 50):
-    print("You see the robot turn into a cow.")
-    print("The cowbot looks to be made of flowers")
-    print("You have no idea what is going on")
-    lootable(1,"Flower",0)
-  elif(finditem("Open Wound")!=-1 and inventory[finditem("Open Wound")][1] >= 1):
-    print("You are hurt. As A human I know that is bad")
-    print("The wierd robot dispenses a bandage")
-    lootable(1,"Bandage",0)
-    print("There you go!")
-  elif(finditem("Infection")!=-1 and inventory[finditem("Infection")][1] >= 1):
-    print("You are infected")
-    print("I can tell from my good not-robotic eyes")
-    print("The robot dispenses some disinfectant")
-    lootable(1,"Disinfectant",0)
-  elif(finditem("Food")==-1 or inventory[finditem("Food")][1] < 50):
-    print("You are hungry")
-    print("Us humans need sustinance")
-    print("The robot dispenses some food")
-    lootable(1,"Food",25)
-  elif(finditem("Water")==-1 or inventory[finditem("Water")][1] < 50):
-    print("You are thirsty")
-    print("H2O is required for your continued existance")
-    print("The robot dispenses some water")
-    lootable(1,"Water",25)
-  elif(finditem("Coin")==-1 or inventory[finditem("Coin")][1] < 1):
-    print("You have no coins")
-    print("Coins are the currency of us humans")
-    print("The robot dispenses some coins")
-    lootable(1,"Coin",25)
-  else:
-    print("We humans have to stick together")
-    print("Have some stuff I found")
-    print("The robot dispenses some random stuff")
-    defaultlootable()
-    defaultlootable()
-    defaultlootable()
-    defaultlootable()
-    defaultlootable()
+    print("You see something approach from the distance")
+    print("                                          ")
+    print("        /\/\/\/\/\/\/\/\/\ ")
+    print("        {|   / \   / \  |}")
+    print("        {|  | + | | + | |}")
+    print("        {|   \_/   \_/  |}")
+    print("        /        #       \ ")
+    print("        |     \_____/    |")
+    print("        \                /")
+    print("         +--------------+")
+    print("          ::::::::::::::")
+    print()
+    print("            ::::::::::")
+    print()
+    print("              ::::::")
+    print()
+    print("Hello! I am a fellow human. Look at me human all over the place")
+    print("How are you doing fellow human?")
+    input()
+    print("I probally feel the same fellow human")
+    if(finditem("curse of insanity")!=-1 and inventory[finditem("curse of insanity")][1] <= 50):
+        print("You see the robot turn into a cow.")
+        print("The cowbot looks to be made of flowers")
+        print("You have no idea what is going on")
+        lootable(1,"Flower",0)
+    elif(finditem("Open Wound")!=-1 and inventory[finditem("Open Wound")][1] >= 1):
+        print("You are hurt. As A human I know that is bad")
+        print("The wierd robot dispenses a bandage")
+        lootable(1,"Bandage",0)
+        print("There you go!")
+    elif(finditem("Infection")!=-1 and inventory[finditem("Infection")][1] >= 1):
+        print("You are infected")
+        print("I can tell from my good not-robotic eyes")
+        print("The robot dispenses some disinfectant")
+        lootable(1,"Disinfectant",0)
+    elif(finditem("Food")==-1 or inventory[finditem("Food")][1] < 50):
+        print("You are hungry")
+        print("Us humans need sustinance")
+        print("The robot dispenses some food")
+        lootable(1,"Food",25)
+    elif(finditem("Water")==-1 or inventory[finditem("Water")][1] < 50):
+        print("You are thirsty")
+        print("H2O is required for your continued existance")
+        print("The robot dispenses some water")
+        lootable(1,"Water",25)
+    elif(finditem("Coin")==-1 or inventory[finditem("Coin")][1] < 1):
+        print("You have no coins")
+        print("Coins are the currency of us humans")
+        print("The robot dispenses some coins")
+        lootable(1,"Coin",25)
+    else:
+        print("We humans have to stick together")
+        print("Have some stuff I found")
+        print("The robot dispenses some random stuff")
+        defaultlootable()
+        defaultlootable()
+        defaultlootable()
+        defaultlootable()
+        defaultlootable()
 def getodds(n):
     if(n==1):
         return("You know you can")
@@ -1181,216 +1181,217 @@ def addwound(wounds):
                 if(random.random()<0.001*modifier):
                     print("Your Knight Armor Was destroyed")
                     inventory[finditem("Knight Armor")][1]=inventory[finditem("Knight Armor")][1]-1
-  if(finditem("curse of wounds")!=-1 and inventory[finditem("curse of wounds")][1]>=1):
-    hits=hits*(inventory[finditem("curse of wounds")][1]+1)
-  print("You were wounded "+int_to_en(hits)+" times")
-  if(saves != 0):
-    print("Your armor saved you from "+int_to_en(saves)+" wounds")
-  addstuff("Open Wound",hits)
+    if(finditem("curse of wounds")!=-1 and inventory[finditem("curse of wounds")][1]>=1):
+        hits=hits*(inventory[finditem("curse of wounds")][1]+1)
+    
+    print("You were wounded "+int_to_en(hits)+" times")
+    if(saves != 0):
+        print("Your armor saved you from "+int_to_en(saves)+" wounds")
+    addstuff("Open Wound",hits)
     #print(a+" : "+b)
 def gameman(v):
-  print("A Stranger Approaches...")
-  print("         __           ")
-  print("       _|__|_         ")
-  print("       |O__O|  ^^^    ")
-  print("       \____/  |||    ")
-  print("         ||    \X/    ")
-  print("       +-++-+   |     ")
-  print("     /-+    +---+     ")
-  print("     | |    |   |     ")
-  print("     \_|    |   |     ")
-  print("       +-++-+         ")
-  print("       | || |         ")
-  print("       | || |         ")
-  print("      /  /\  \        ")
-  print()
-  end=1
-  if(v == 1):
-    print("I have a bet for you")
-  elif(v == 0):
-    print("Are you any good at the game?")
-  if(finditem("Dark Shard")!=-1):
-      print("You feel your Dark shard speak to you")
-  response=input()
-  if(finditem("Dark Shard")!=-1 and (variableify(response)=="USEDARKSHARD" or variableify(response)=="DARKSHARD" or variableify(response)=="IATTACK" or variableify(response)=="IKILL")):
-      print("                     ")
-      print("       /\__/\         ")
-      print("       |O__O|  666    ")
-      print("       \____/  |||    ")
-      print("         ||    \X/    ")
-      print("       +-++-+   |     ")
-      print("     /-+666 +---+     ")
-      print("     | |    |   |     ")
-      print("     \_|    |   |     ")
-      print("       +-++-+         ")
-      print("       | || |         ")
-      print("       | || |         ")
-      print("      /  /\  \        ")
-      print("The Figure reveals itself to be the devil")
-      print("Well... You seem to know who I am...")
-      print("Wanna raise the stakes?")
-      input()
-      print("What? I couldn't hear you")
-      input()
-      print("You wanna bet your soul?")
-      input()
-      print("I don't care.")
-      if(v == 1):
-        print("if you flip the coin and get heads, I get your soul.")
-        print("If you get tails, I will give you an amulet that will let you avoid my grasp once")
-        print("Are you ready?")
+    print("A Stranger Approaches...")
+    print("         __           ")
+    print("       _|__|_         ")
+    print("       |O__O|  ^^^    ")
+    print("       \____/  |||    ")
+    print("         ||    \X/    ")
+    print("       +-++-+   |     ")
+    print("     /-+    +---+     ")
+    print("     | |    |   |     ")
+    print("     \_|    |   |     ")
+    print("       +-++-+         ")
+    print("       | || |         ")
+    print("       | || |         ")
+    print("      /  /\  \        ")
+    print()
+    end=1
+    if(v == 1):
+        print("I have a bet for you")
+    elif(v == 0):
+        print("Are you any good at the game?")
+    if(finditem("Dark Shard")!=-1):
+        print("You feel your Dark shard speak to you")
+    response=input()
+    if(finditem("Dark Shard")!=-1 and (variableify(response)=="USEDARKSHARD" or variableify(response)=="DARKSHARD" or variableify(response)=="IATTACK" or variableify(response)=="IKILL")):
+        print("                     ")
+        print("       /\__/\         ")
+        print("       |O__O|  666    ")
+        print("       \____/  |||    ")
+        print("         ||    \X/    ")
+        print("       +-++-+   |     ")
+        print("     /-+666 +---+     ")
+        print("     | |    |   |     ")
+        print("     \_|    |   |     ")
+        print("       +-++-+         ")
+        print("       | || |         ")
+        print("       | || |         ")
+        print("      /  /\  \        ")
+        print("The Figure reveals itself to be the devil")
+        print("Well... You seem to know who I am...")
+        print("Wanna raise the stakes?")
         input()
-        print("I don't care. Let the coin toss for your soul, Begin!")
-      elif(v == 0):
-        print("if you win, I get your soul.")
-        print("If you lose, I will give you an amulet that will let you avoid my grasp once")
-        print("Are you ready?")
+        print("What? I couldn't hear you")
         input()
-        print("I don't care. Let the tic tac toe game for your soul, Begin!")
-      if(v == 1):
-        game = round(random.random())
-      elif(v == 0):
-        game = tictac(1)
-      if(game!=1):
-          if(game==-1):
-              print("Ah, Unexpected. The game has tied. I will end you anyway.")
-          else:
-              if(v == 0):
-                print("Oh well, What a pity. Heads")
-              elif(v == 1):
-                print("Oh well, What a pity. I won")
-              print("Your soul looks nice, Now. Die")
-              print("Any last words?")
-              input()
-          endgame()
-      elif(game==1):
-          if(v == 0):
-            print("Ah, Tails.I am a man of my word.")
-          elif(v == 1):
-            print("Ah, I lost. I am a man of my word.")
-          lootable(1,"Death Amulet",0)
-          print("When you die, It will revive you")
-      print("The Figure vanishes.")
-      end=0
-  if(end==1):
-      if(v == 1):
-        print("Okay, The bet is that if I flip this here coin, and get heads, you win. If its tails, you lose")
-        print("So, Wanna make a bet?")
-      elif(v == 0):            
-        print("Eh, I don't care. Wanna play?")
-      if(variableify(input())[0]=="N"):
-          print("Okay, Imma be on my way")
-          if(v == 0):
-            print("Instead you play against yourself")
-            tictac(0)
-      else:
-          print("I am gonna take dat as a yes!")
-          print("How much coin do ya wanna bet?")
-          if(finditem("Coin")==-1):
-              print("You don't have any coins")
-          elif(inventory[finditem("Coin")][1]==0):
-              print("You don't have any coins")
-          elif(inventory[finditem("Coin")][1]==1):
-              print("You look around in your pockets, You have one coin")
-          else:
-              print("You look around in your pockets, You have "+int_to_en(inventory[finditem("Coin")][1])+" coins")    
-          betest = False
-          while(betest == False):
-            betamount="0"+input()
-            betest = True;
-            for i in range(len(betamount)):
-              if((betamount[i] != "0" and betamount[i] != "1" and    betamount[i] != "2" and betamount[i] != "3" and betamount[i] != "4" and betamount[i] != "5" and  betamount[i] != "6" and betamount[i] != "7" and betamount[i] != "8" and betamount[i] != "9")):
-                betest = False;
-          betamount = int(betamount)
-          odds=1.01**(-1*betamount)
-          #print(odds)
-          if(random.random()>odds):
-              print("Do you actualy HAVE that much money?")
-              input()
-              print("Let me see...")
-              if(finditem("Coin")==-1 or inventory[finditem("Coin")][1]<betamount):
-                  print("You dont have the coin!")
-                  stabamount=1+int(random.random()*math.ceil(betamount/10))
-                  if(stabamount>15):
-                      stabamount=15
-                  addwound(stabamount)
-                  betamount=-1
-              else:
-                  print("Okay, Good. You have the money")
-          if(betamount==0):
-            if(v==1):
-              print("Haha, Its only fun if you bet!")
-            elif(v==0):
-              print("Okay, Lets play")
-              tictac(1);
-              print("Good game!")
-            print("The Stranger Leaves")
-          elif(betamount>0):
-              print("Allright! Lets do this!")
-              if(v == 1):
-                game = round(random.random())
-              elif(v == 0):
-                game = tictac(1)
-              if(game==0):
-                  print("Ha! I win!")
-                  if(finditem("Coin")==-1 or inventory[finditem("Coin")][1]<betamount):
-                      print("Wait, You ain't got the coin!")
-                      print("You notice he is very unhappy")
-                      print("He attempts to stab you for not being able to pay")
-                      stabamount=1+int(random.random()*math.ceil(betamount/10))
-                      if(stabamount>15):
-                              stabamount=15
-                      addwound(stabamount)
-                      print("He runs off into the distance")
-                  else:
-                      print("It was a fun game, Now hand over the coin!")
-                      print("Do you give him the coin?(Y/N)")
-                      givecoin=input()
-                      if(variableify(givecoin)[0]=="N"):
-                          print("Wait, I ain't gettin paid?")
-                          print("You notice he is unhappy")
-                          print("He attempts to stab you")
-                          stabamount=1+int(random.random()*math.ceil(betamount/10))
-                          if(stabamount>5):
-                              stabamount=5
-                          addwound(stabamount)
-                          
-                          print("He runs off into the distance")
-                      else:
-                          inventory[finditem("Coin")][1]-=betamount
-              elif(game==1):
-                  print("Darn, Oh well")
-                  addstuff("Coin",betamount)
-                  print("He leaves, "+int_to_en(betamount)+" coins poorer")
-              else:
-                  print("With a tie, He Leaves")
-          else:
-              print("I ain't gonna play.")
+        print("You wanna bet your soul?")
+        input()
+        print("I don't care.")
+        if(v == 1):
+            print("if you flip the coin and get heads, I get your soul.")
+            print("If you get tails, I will give you an amulet that will let you avoid my grasp once")
+            print("Are you ready?")
+            input()
+            print("I don't care. Let the coin toss for your soul, Begin!")
+        elif(v == 0):
+            print("if you win, I get your soul.")
+            print("If you lose, I will give you an amulet that will let you avoid my grasp once")
+            print("Are you ready?")
+            input()
+            print("I don't care. Let the tic tac toe game for your soul, Begin!")
+        if(v == 1):
+            game = round(random.random())
+        elif(v == 0):
+            game = tictac(1)
+        if(game!=1):
+            if(game==-1):
+                print("Ah, Unexpected. The game has tied. I will end you anyway.")
+            else:
+                if(v == 0):
+                    print("Oh well, What a pity. Heads")
+                elif(v == 1):
+                    print("Oh well, What a pity. I won")
+                print("Your soul looks nice, Now. Die")
+                print("Any last words?")
+                input()
+            endgame()
+        elif(game==1):
+            if(v == 0):
+                print("Ah, Tails.I am a man of my word.")
+            elif(v == 1):
+                print("Ah, I lost. I am a man of my word.")
+            lootable(1,"Death Amulet",0)
+            print("When you die, It will revive you")
+        print("The Figure vanishes.")
+        end=0
+    if(end==1):
+        if(v == 1):
+            print("Okay, The bet is that if I flip this here coin, and get heads, you win. If its tails, you lose")
+            print("So, Wanna make a bet?")
+        elif(v == 0):            
+            print("Eh, I don't care. Wanna play?")
+        if(variableify(input())[0]=="N"):
+            print("Okay, Imma be on my way")
+            if(v == 0):
+                print("Instead you play against yourself")
+                tictac(0)
+        else:
+            print("I am gonna take dat as a yes!")
+            print("How much coin do ya wanna bet?")
+            if(finditem("Coin")==-1):
+                print("You don't have any coins")
+            elif(inventory[finditem("Coin")][1]==0):
+                print("You don't have any coins")
+            elif(inventory[finditem("Coin")][1]==1):
+                print("You look around in your pockets, You have one coin")
+            else:
+                print("You look around in your pockets, You have "+int_to_en(inventory[finditem("Coin")][1])+" coins")    
+            betest = False
+            while(betest == False):
+                betamount="0"+input()
+                betest = True
+                for i in range(len(betamount)):
+                if((betamount[i] != "0" and betamount[i] != "1" and    betamount[i] != "2" and betamount[i] != "3" and betamount[i] != "4" and betamount[i] != "5" and  betamount[i] != "6" and betamount[i] != "7" and betamount[i] != "8" and betamount[i] != "9")):
+                    betest = False
+            betamount = int(betamount)
+            odds=1.01**(-1*betamount)
+            #print(odds)
+            if(random.random()>odds):
+                print("Do you actualy HAVE that much money?")
+                input()
+                print("Let me see...")
+                if(finditem("Coin")==-1 or inventory[finditem("Coin")][1]<betamount):
+                    print("You dont have the coin!")
+                    stabamount=1+int(random.random()*math.ceil(betamount/10))
+                    if(stabamount>15):
+                        stabamount=15
+                    addwound(stabamount)
+                    betamount=-1
+                else:
+                    print("Okay, Good. You have the money")
+            if(betamount==0):
+                if(v==1):
+                    print("Haha, Its only fun if you bet!")
+                elif(v==0):
+                    print("Okay, Lets play")
+                    tictac(1)
+                    print("Good game!")
+                print("The Stranger Leaves")
+            elif(betamount>0):
+                print("Allright! Lets do this!")
+                if(v == 1):
+                    game = round(random.random())
+                elif(v == 0):
+                    game = tictac(1)
+                if(game==0):
+                    print("Ha! I win!")
+                    if(finditem("Coin")==-1 or inventory[finditem("Coin")][1]<betamount):
+                        print("Wait, You ain't got the coin!")
+                        print("You notice he is very unhappy")
+                        print("He attempts to stab you for not being able to pay")
+                        stabamount=1+int(random.random()*math.ceil(betamount/10))
+                        if(stabamount>15):
+                            stabamount=15
+                        addwound(stabamount)
+                        print("He runs off into the distance")
+                    else:
+                        print("It was a fun game, Now hand over the coin!")
+                        print("Do you give him the coin?(Y/N)")
+                        givecoin=input()
+                        if(variableify(givecoin)[0]=="N"):
+                            print("Wait, I ain't gettin paid?")
+                            print("You notice he is unhappy")
+                            print("He attempts to stab you")
+                            stabamount=1+int(random.random()*math.ceil(betamount/10))
+                            if(stabamount>5):
+                                stabamount=5
+                            addwound(stabamount)
+                            
+                            print("He runs off into the distance")
+                        else:
+                            inventory[finditem("Coin")][1]-=betamount
+                elif(game==1):
+                    print("Darn, Oh well")
+                    addstuff("Coin",betamount)
+                    print("He leaves, "+int_to_en(betamount)+" coins poorer")
+                else:
+                    print("With a tie, He Leaves")
+            else:
+                print("I ain't gonna play.")
 def wierdman():
-  print("You see a wierd man approach")
-  print("       __________")
-  print("      /          \ ")
-  print("      | -o-  -o- | ")
-  print("      |     |    | ")
-  print("      |    ___   | ")
-  print("      \          / ")
-  print("      |__________| ")
-  print("    __/   <-->   \___ ")
-  print("   /###\         /###\ ")
-  print("   |####\       /####|")
-  print("   |#####|     |#####|")
-  print("   |#####|     |#####|")
-  print("   |#####|     |#####|")
-  print()
-  print("The end is the devil")
-  print("The devil has come,")
-  print("With blood to fire,")  
-  print("The end has come,")
-  print("With Blood to fire")
-  print("The end shall go")
-  print("With Blood to fire")
-  print()
-  print("The rambling loonatic leaves")
+    print("You see a wierd man approach")
+    print("       __________")
+    print("      /          \ ")
+    print("      | -o-  -o- | ")
+    print("      |     |    | ")
+    print("      |    ___   | ")
+    print("      \          / ")
+    print("      |__________| ")
+    print("    __/   <-->   \___ ")
+    print("   /###\         /###\ ")
+    print("   |####\       /####|")
+    print("   |#####|     |#####|")
+    print("   |#####|     |#####|")
+    print("   |#####|     |#####|")
+    print()
+    print("The end is the devil")
+    print("The devil has come,")
+    print("With blood to fire,")  
+    print("The end has come,")
+    print("With Blood to fire")
+    print("The end shall go")
+    print("With Blood to fire")
+    print()
+    print("The rambling loonatic leaves")
 def chestlootable():
     lootable(0.5,"Coin",50)
     lootable(0.05,"Tic Tac Toe Board",0)
@@ -1761,7 +1762,7 @@ def entercombat(entity,surprise):
                 addstuff("Venom",1)
             if(abilities[abil]=="grapple"):
                 print("the "+entity+" grapples you")
-                print("to break its grasp you have to guess the right number")
+                print("to break its grasp you have to guess the right number between 1 and 10")
                 print("type a number to start:")
                 guess=input()
                 while(len(guess)==0):
@@ -1890,48 +1891,48 @@ def entercombat(entity,surprise):
                     print("It breaks")
                     addstuff("Hands",2)
             elif(useitem=="HEALINGSCROLL"):
-               addstuff("Healing Scroll",-1)
-               print("You speak the words on the scroll")
-               if(finditem("Open Wound")!=-1 and inventory[finditem("Open Wound")][1]>=1):
-                   if(modifier > 10):
-                     inventory[finditem("Open Wound")][1]-=5
-                   else:
-                     inventory[finditem("Open Wound")][1]-=15-modifier
-                   if(inventory[finditem("Open Wound")][1] < 0):
-                     inventory[finditem("Open Wound")][1] = 0
-                   print("You feel some wounds close")
-               if(finditem("Venom")!=-1 and inventory[finditem("Venom")][1]>=1):
-                   if(modifier > 10):
-                     inventory[finditem("Venom")][1]-=5
-                   else:
-                     inventory[finditem("Venom")][1]-=15-modifier
-                   if(inventory[finditem("Venom")][1] < 0):
-                     inventory[finditem("Venom")][1] = 0
-                   print("You feel the venom leave your system")
-               if(finditem("Infection")!=-1 and inventory[finditem("Infection")][1]>=1):
-                   inventory[finditem("INFECTION")][1] -= round((random.random()*250)/modifier)
-                   if(inventory[finditem("INFECTION")][1] < 0):
-                       inventory[finditem("INFECTION")][1] = 0
-                   print("You feel the infections leave your system")
-               if(finditem("Radiation")!=-1 and inventory[finditem("Radiation")][1]>=1):
-                   if(modifier > 10):
-                     inventory[finditem("Venom")][1]-=5
-                   else:
-                     inventory[finditem("Venom")][1]-=15-modifier
-                   if(inventory[finditem("Venom")][1] < 0):
-                     inventory[finditem("Venom")][1] = 0
-                   print("You feel the radiation leave your body")
-               if(finditem("Cancer")!=-1 and inventory[finditem("Cancer")][1]>=1):
-                   if(modifier > 10):
-                     inventory[finditem("Cancer")][1]-=5
-                   else:
-                     inventory[finditem("Cancer")][1]-=15-modifier
-                   if(inventory[finditem("Cancer")][1] < 0):
-                     inventory[finditem("Cancer")][1] = 0
-                   print("You feel the radiation leave your body")
-               lootable(1,"Blood",50)
-               if(inventory[finditem("Blood")][1]>=100):
-                 inventory[finditem("Blood")][1] = 100
+                addstuff("Healing Scroll",-1)
+                print("You speak the words on the scroll")
+                if(finditem("Open Wound")!=-1 and inventory[finditem("Open Wound")][1]>=1):
+                    if(modifier > 10):
+                        inventory[finditem("Open Wound")][1]-=5
+                    else:
+                        inventory[finditem("Open Wound")][1]-=15-modifier
+                    if(inventory[finditem("Open Wound")][1] < 0):
+                        inventory[finditem("Open Wound")][1] = 0
+                    print("You feel some wounds close")
+                if(finditem("Venom")!=-1 and inventory[finditem("Venom")][1]>=1):
+                    if(modifier > 10):
+                        inventory[finditem("Venom")][1]-=5
+                    else:
+                        inventory[finditem("Venom")][1]-=15-modifier
+                    if(inventory[finditem("Venom")][1] < 0):
+                        inventory[finditem("Venom")][1] = 0
+                    print("You feel the venom leave your system")
+                if(finditem("Infection")!=-1 and inventory[finditem("Infection")][1]>=1):
+                    inventory[finditem("INFECTION")][1] -= round((random.random()*250)/modifier)
+                    if(inventory[finditem("INFECTION")][1] < 0):
+                        inventory[finditem("INFECTION")][1] = 0
+                    print("You feel the infections leave your system")
+                if(finditem("Radiation")!=-1 and inventory[finditem("Radiation")][1]>=1):
+                    if(modifier > 10):
+                        inventory[finditem("Venom")][1]-=5
+                    else:
+                        inventory[finditem("Venom")][1]-=15-modifier
+                    if(inventory[finditem("Venom")][1] < 0):
+                        inventory[finditem("Venom")][1] = 0
+                    print("You feel the radiation leave your body")
+                if(finditem("Cancer")!=-1 and inventory[finditem("Cancer")][1]>=1):
+                    if(modifier > 10):
+                        inventory[finditem("Cancer")][1]-=5
+                    else:
+                        inventory[finditem("Cancer")][1]-=15-modifier
+                    if(inventory[finditem("Cancer")][1] < 0):
+                        inventory[finditem("Cancer")][1] = 0
+                    print("You feel the radiation leave your body")
+                lootable(1,"Blood",50)
+                if(inventory[finditem("Blood")][1]>=100):
+                    inventory[finditem("Blood")][1] = 100
             elif(useitem=="IRONGLOVES"):
                 hp=hp-3
             elif(useitem=="PICKAXE"):
@@ -1940,16 +1941,16 @@ def entercombat(entity,surprise):
                 addstuff("Herb",-1)
                 print("You apply herbal treatments...")
                 if(finditem("Open Wound")!=-1 and random.random()>0.1*modifier and inventory[finditem("Open Wound")][1]>=1):
-                   inventory[finditem("Open Wound")][1]-=1
-                   print("You clean wounds")
+                    inventory[finditem("Open Wound")][1]-=1
+                    print("You clean wounds")
                 if(finditem("Venom")!=-1 and random.random()>0.1*modifier and inventory[finditem("Venom")][1]>=1):
-                   inventory[finditem("Venom")][1]-=Math.ceil(6/modifier)
-                   print("You clear out your venom")
+                    inventory[finditem("Venom")][1]-=Math.ceil(6/modifier)
+                    print("You clear out your venom")
                 if(finditem("Infection")!=-1 and random.random()>0.1*modifier and inventory[finditem("Infection")][1]>=1):
-                   inventory[finditem("Infection")][1]-=Math.ceil(10/modifier)
-                   print("You apply the herb disinfectantly")
+                    inventory[finditem("Infection")][1]-=Math.ceil(10/modifier)
+                    print("You apply the herb disinfectantly")
                 if(inventory[finditem("Blood")][1]<=90):
-                   lootable(0.5,"Blood",5)
+                    lootable(0.5,"Blood",5)
             elif(useitem=="MAKESHIFTAXE"):
                 hp=hp-2
                 if(random.random()>0.5):
@@ -2149,11 +2150,11 @@ def entercombat(entity,surprise):
     if(leave==0 and alive == 1):
         print("You defeated the "+entity)
         if(meat > 0):
-          lootable(0.9,"XP",(xp-1)) 
-          lootable(0.9,"Raw Food",(meat-1)*10)
-          lootable(0.5,"Bone",(meat-1)*10)
-          lootable(0.5,"Fur",(meat-1)*10)
-          lootable(0.5,"Hide",(meat-1)*10)
+            lootable(0.9,"XP",(xp-1)) 
+            lootable(0.9,"Raw Food",(meat-1)*10)
+            lootable(0.5,"Bone",(meat-1)*10)
+            lootable(0.5,"Fur",(meat-1)*10)
+            lootable(0.5,"Hide",(meat-1)*10)
         return True;
     elif(leave == 0):
         return False;
@@ -2326,66 +2327,66 @@ while(alive==1):
         else:
             print("You are blind...")
     elif(a=="MOVE"):
-       if(len(sections)>1):
-           b=" ".join(sections[1:len(sections)])
-           b=variableify(b)
-           while(b[0]!="N" and b[0]!="E" and b[0]!="S" and b[0]!="W"):
-               b=direction("I move to the ")
-               b=variableify(b)
+        if(len(sections)>1):
+            b=" ".join(sections[1:len(sections)])
+            b=variableify(b)
+            while(b[0]!="N" and b[0]!="E" and b[0]!="S" and b[0]!="W"):
+                b=direction("I move to the ")
+                b=variableify(b)
                
-       else:
-           b=direction("I move to the ")
-       if(b!="x"):
-           b=b.upper()
-           b=b[0]
-           if(b=="N"):
-               if(y-1>=0):
-                   if(world[x][y-1]!="+"):
-                       print("You travel to the north")
-                       y=y-1
-                   else:
-                       blocked(x,y-1)    
-               else:
-                   print("You would like to move to the north, but you are stopped by an endless abiss")
-           elif(b=="E"):
-               if(x+1<height):
-                   if(world[x+1][y]!="+"):
-                       print("You travel to the east")
-                       x=x+1
-                   else:
-                       blocked(x+1,y)
-               else:
-                   print("You would like to move to the east, but you are stopped by an endless abiss")
-           elif(b=="S"):
-               if(y+1<width):
-                   if(world[x][y+1]!="+"):
-                       print("You travel to the south")
-                       y=y+1
-                   else:
-                       blocked(x,y+1)
-               else:
-                   print("You would like to move to the south, but you are stopped by an endless abiss")
-           elif(b=="W"):
-               if(x-1>=0):
-                   if(world[x-1][y]!="+"):
-                       print("You travel to the west")
-                       x=x-1
-                   else:
-                       blocked(x-1,y)
-               else:
-                   print("You would like to move to the west, but you are stopped by an endless abiss")
-           else:
-               greatjob()
-               ##this code should never run in normal operations
-           passtime(1)
+        else:
+            b=direction("I move to the ")
+        if(b!="x"):
+            b=b.upper()
+            b=b[0]
+            if(b=="N"):
+                if(y-1>=0):
+                    if(world[x][y-1]!="+"):
+                        print("You travel to the north")
+                        y=y-1
+                    else:
+                        blocked(x,y-1)    
+                else:
+                    print("You would like to move to the north, but you are stopped by an endless abiss")
+            elif(b=="E"):
+                if(x+1<height):
+                    if(world[x+1][y]!="+"):
+                        print("You travel to the east")
+                        x=x+1
+                    else:
+                        blocked(x+1,y)
+                else:
+                    print("You would like to move to the east, but you are stopped by an endless abiss")
+            elif(b=="S"):
+                if(y+1<width):
+                    if(world[x][y+1]!="+"):
+                        print("You travel to the south")
+                        y=y+1
+                    else:
+                        blocked(x,y+1)
+                else:
+                    print("You would like to move to the south, but you are stopped by an endless abiss")
+            elif(b=="W"):
+                if(x-1>=0):
+                    if(world[x-1][y]!="+"):
+                        print("You travel to the west")
+                        x=x-1
+                    else:
+                        blocked(x-1,y)
+                else:
+                    print("You would like to move to the west, but you are stopped by an endless abiss")
+            else:
+                greatjob()
+                ##this code should never run in normal operations
+            passtime(1)
     elif(a=="ASK"):
         if(len(sections)>1):
-           b=" ".join(sections[1:len(sections)])
-           b=variableify(b)
+            b=" ".join(sections[1:len(sections)])
+            b=variableify(b)
         else:
-           print("What do you need? For a list of commands say 'a command'")
-           print("say a specific command to get more detail about it")
-           b=input("What is ")
+            print("What do you need? For a list of commands say 'a command'")
+            print("say a specific command to get more detail about it")
+            b=input("What is ")
         b=variableify(b)
         if(b=="ACOMMAND"):
             print("The commands are how you interact with this universe!")
@@ -2418,555 +2419,555 @@ while(alive==1):
         else:
             print("That is not a valid command. Say 'ask a command' in the main prompt to get a list of commands")
     elif(a=="INVENTORY"):
-       getinventory()
+        getinventory()
     elif(a=="HUNT"):
-       if(world[x][y]=="T"):
-           print("You wait an hour for a creature to come by...")
-           passtime(1);
-           if(random.random()>0.05*modifier):
-               entercombat("@Nature",0)
-           else:
-               print("nothing comes")
-       elif(world[x][y]=="t"):
-           print("You wait an hour for a creature to come by...")
-           passtime(1);
-           if(random.random()>0.10*modifier):
-               entercombat("@Nature",0)
-           else:
-               print("nothing comes")
-       elif(world[x][y]=="?"):
-           entercombat("@Fantacy",0)
-       elif(world[x][y]==" "):
-           print("You wait an hour for a creature to come by...")
-           passtime(1);
-           if(random.random()>0.15*modifier):
-               entercombat("@Nature",0)
-           else:
-               print("nothing comes")
-       else:
-           print("You do not see anything to hunt")
+        if(world[x][y]=="T"):
+            print("You wait an hour for a creature to come by...")
+            passtime(1);
+            if(random.random()>0.05*modifier):
+                entercombat("@Nature",0)
+            else:
+                print("nothing comes")
+        elif(world[x][y]=="t"):
+            print("You wait an hour for a creature to come by...")
+            passtime(1);
+            if(random.random()>0.10*modifier):
+                entercombat("@Nature",0)
+            else:
+                print("nothing comes")
+        elif(world[x][y]=="?"):
+            entercombat("@Fantacy",0)
+        elif(world[x][y]==" "):
+            print("You wait an hour for a creature to come by...")
+            passtime(1);
+            if(random.random()>0.15*modifier):
+                entercombat("@Nature",0)
+            else:
+                print("nothing comes")
+        else:
+            print("You do not see anything to hunt")
     elif(a=="OBSERVE"):
-       if((finditem("curse of blindness")==-1 or inventory[finditem("curse of blindness")][1] <= 0)): 
-           print("You look around, You are around "+identify(world[x][y]))
-       else:
-           print("You are blind...")
+        if((finditem("curse of blindness")==-1 or inventory[finditem("curse of blindness")][1] <= 0)): 
+            print("You look around, You are around "+identify(world[x][y]))
+        else:
+            print("You are blind...")
     elif(a=="DEBUG"):
-       if(len(sections)>1):
-           command=" ".join(sections[1:len(sections)])
-       else:
-           command=input(">>")
-       if(command=="loop()"):
-           while(command!="exit()"):
-               command=input(">>")
-               if(command=="exit()"):
-                   print("Exiting")
-               else:
-                   exec(command)
-       else:
-           exec(command)
+        if(len(sections)>1):
+            command=" ".join(sections[1:len(sections)])
+        else:
+            command=input(">>")
+        if(command=="loop()"):
+            while(command!="exit()"):
+                command=input(">>")
+                if(command=="exit()"):
+                    print("Exiting")
+                else:
+                    exec(command)
+        else:
+            exec(command)
     elif(a=="WAIT"):
-       if(len(sections)>1):
-          b=" ".join(sections[1:len(sections)])
-          b=variableify(b)
-          hourtowait=b
-       else:
-          print("Warning: You can :")
-          print("Starve")
-          print("Be injured")
-          print("Die of Dehydration")
-          print("or Die of blood loss ")
-          print("while you wait. Be carefull")
-          print("You sit down, and prepare to wait")
-          print("How many hours do you sit for?")
-          print("Say 'nvm' to cancel")
-          hourtowait=input()           
-       valid = 1;
-       if(hourtowait!="nvm"):
-           for i in range(len(hourtowait)):
-               if(hourtowait[i] != "1" and hourtowait[i] != "2" and hourtowait[i] != "3" and hourtowait[i] != "4" and hourtowait[i] != "5" and hourtowait[i] != "6" and hourtowait[i] != "7" and hourtowait[i] != "8" and hourtowait[i] != "9" and hourtowait[i] != "0"):
-                   valid = 0
-       if(valid == 0):
-           print("that is not valid")
-           hourtowait = "nvm"
-       if(hourtowait!="nvm" and hourtowait!="0" and int(hourtowait)!=""):
-           if(int(hourtowait)==1):
-               print("You wait for "+hourtowait+" hour")
-           else:
-                if(int(hourtowait)>72):
+        if(len(sections)>1):
+            b=" ".join(sections[1:len(sections)])
+            b=variableify(b)
+            hourtowait=b
+        else:
+            print("Warning: You can :")
+            print("Starve")
+            print("Be injured")
+            print("Die of Dehydration")
+            print("or Die of blood loss ")
+            print("while you wait. Be carefull")
+            print("You sit down, and prepare to wait")
+            print("How many hours do you sit for?")
+            print("Say 'nvm' to cancel")
+            hourtowait=input()           
+        valid = 1;
+        if(hourtowait!="nvm"):
+            for i in range(len(hourtowait)):
+                if(hourtowait[i] != "1" and hourtowait[i] != "2" and hourtowait[i] != "3" and hourtowait[i] != "4" and hourtowait[i] != "5" and hourtowait[i] != "6" and hourtowait[i] != "7" and hourtowait[i] != "8" and hourtowait[i] != "9" and hourtowait[i] != "0"):
+                    valid = 0
+        if(valid == 0):
+            print("that is not valid")
+            hourtowait = "nvm"
+        if(hourtowait!="nvm" and hourtowait!="0" and int(hourtowait)!=""):
+            if(int(hourtowait)==1):
+                print("You wait for "+hourtowait+" hour")
+            else:
+                 if(int(hourtowait)>72):
                     print("You are to imatient to wait "+int_to_en(int(hourtowait))+" hours, You will instead wait seventy-two hours")
                     hourtowait="72"
-                else:
+                 else:
                     print("You wait for "+hourtowait+" hours")
-           passtime(int(hourtowait))
+            passtime(int(hourtowait))
     elif(a=="CRAFT"):
-       print("You sit down to build")
-       Item1 = input("Item 1: ")
-       Item2 = input("Item 2: ")
-       masscraft(Item1,Item2)
+        print("You sit down to build")
+        Item1 = input("Item 1: ")
+        Item2 = input("Item 2: ")
+        masscraft(Item1,Item2)
     elif(a=="USE"):
-       if(len(sections)>1):
-           b=" ".join(sections[1:len(sections)])
-           useitem=variableify(b)
-       else:
-           print("What do you want to use(type ? if you don't know or type nvm to cancel)")
-           useitem=input("I use my ")
-       while(useitem=="?" or useitem==""):
-           getinventory()
-           useitem=input("I use my ")
-       while((useitem!="nvm") and (finditem(useitem)==-1 or inventory[finditem(useitem)][1]==0)):
-           if(useitem=="?" or useitem==""):
-               getinventory()
-           else:
-               print("")
-               print("You don't have that")
-               print("Type '?' to see what you have")
-               print("Type 'nvm' to cancel")
-               print("Spelling must be as shown in your inventory")
-           useitem=input("I use my ")
-       if(useitem!="nvm"):
-           passtime(1)
-           useitem=variableify(useitem)
-           print("You use your "+useitem+" around "+identify(world[x][y]))
-           if(useitem=="HANDS" or useitem=="BASICGLOVES" or useitem=="CLOTHGLOVES" or useitem=="HIDEGLOVES" or useitem=="LEATHERGLOVES" or useitem=="CHAINGLOVES"  or useitem=="IRONGLOVES"):
-               odds=random.random()
-               if((useitem=="HANDS" and odds<0.1) or (useitem=="BASICGLOVES" and odds<0.2) or (useitem=="CLOTHGLOVES" and odds<0.3) or (useitem=="HIDEGLOVES" and odds<0.4) or (useitem=="LEATHERGLOVES" and odds<0.5) or (useitem=="CHAINGLOVES" and odds<0.6) or (useitem=="IRONGLOVES" and odds<0.1)):
-                   defaultlootable()
-               if(world[x][y]=="t" or world[x][y]=="T"):
-                   odds=random.random()
-                   if(odds<0.7):
-                       defaultlootable()
-               if(world[x][y]=="?" or world[x][y]=="?"):
-                   lootable(0.1,"Dark Shard",0)
-                   if(random.random()>0.5):
-                       entercombat("@Fantacy",0)
-               if(world[x][y]=="~" or world[x][y]=="w"):
-                   lootable(0.7,"Water",10)
-               if(world[x][y]=="x"):
-                       world[x][y]=" "
-                       lootable(0.9,"Firepit",0)
-               if(world[x][y]=="X"):
-                       world[x][y]=" "
-                       lootable(0.9,"Campfire",0)
-               if(world[x][y]=="A"):
-                   defaultlootable()
-                   lootable(0.01,"Ore",1)
-                   odds=random.random()
-                   if(odds<0.01):
-                       chestlootable()
-           elif(useitem=="CANCER"):
-              cancercheck();
-           elif(useitem=="MAKESHIFTAXE"):
-               if(world[x][y]=="t" or world[x][y]=="T"):
-                   odds=random.random()
-                   if(odds<0.1):
-                       inventory[finditem("MAKESHIFTAXE")][1]-=1
-                       print("It breaks")
-                   lootable(1,"Wood",10)
-                   if(world[x][y]=="t"):
-                       world[x][y]=" "
-                   if(world[x][y]=="T"):
-                       lootable(1,"Wood",5)
-                       world[x][y]="t"
-           elif(useitem=="IRONAXE"):
-               if(world[x][y]=="t" or world[x][y]=="T"):
-                   odds=random.random()
-                   if(odds<0.01):
-                       inventory[finditem("IRONAXE")][1]-=1
-                       print("It breaks")
-                   lootable(1,"Wood",20)
-                   if(world[x][y]=="t"):
-                       world[x][y]=" "
-                   if(world[x][y]=="T"):
-                       lootable(1,"Wood",10)
-                       world[x][y]="t"
-           elif(useitem=="EMPTYBOTTLE"):
-               if(world[x][y]=="~" or world[x][y]=="w"):
-                   lootable(0.9,"Water",10)
-           elif(useitem=="NOTE"):
-               print("You read the note")
-               print("<------------------->")
-               print("The end is the devil")
-               print("The devil has come,")
-               print("With blood to fire,")  
-               print("The end has come,")
-               print("With Blood to fire")
-               print("The end shall go")
-               print("With Blood to fire")
-               print("<------------------->")
-           elif(useitem=="BLOOD"):
-             if(world[x][y] == "X"):
-               print("The mysterious note did say 'Blood to fire'...")
-               print("Do you cut your arm?")
-               cut=input()
-               if(variableify(cut)[0]=="Y"):
-                  print("You cut your arm")
-                  addstuff("Open Wound",1)
-                  print("Some blood drips onto the campfire")
-                  endgame()
-               else:
-                 print("You change your mind, probally a good idea")
+        if(len(sections)>1):
+            b=" ".join(sections[1:len(sections)])
+            useitem=variableify(b)
+        else:
+            print("What do you want to use(type ? if you don't know or type nvm to cancel)")
+            useitem=input("I use my ")
+        while(useitem=="?" or useitem==""):
+            getinventory()
+            useitem=input("I use my ")
+        while((useitem!="nvm") and (finditem(useitem)==-1 or inventory[finditem(useitem)][1]==0)):
+            if(useitem=="?" or useitem==""):
+                getinventory()
+            else:
+                print("")
+                print("You don't have that")
+                print("Type '?' to see what you have")
+                print("Type 'nvm' to cancel")
+                print("Spelling must be as shown in your inventory")
+            useitem=input("I use my ")
+        if(useitem!="nvm"):
+            passtime(1)
+            useitem=variableify(useitem)
+            print("You use your "+useitem+" around "+identify(world[x][y]))
+            if(useitem=="HANDS" or useitem=="BASICGLOVES" or useitem=="CLOTHGLOVES" or useitem=="HIDEGLOVES" or useitem=="LEATHERGLOVES" or useitem=="CHAINGLOVES"  or useitem=="IRONGLOVES"):
+                odds=random.random()
+                if((useitem=="HANDS" and odds<0.1) or (useitem=="BASICGLOVES" and odds<0.2) or (useitem=="CLOTHGLOVES" and odds<0.3) or (useitem=="HIDEGLOVES" and odds<0.4) or (useitem=="LEATHERGLOVES" and odds<0.5) or (useitem=="CHAINGLOVES" and odds<0.6) or (useitem=="IRONGLOVES" and odds<0.1)):
+                    defaultlootable()
+                if(world[x][y]=="t" or world[x][y]=="T"):
+                    odds=random.random()
+                    if(odds<0.7):
+                        defaultlootable()
+                if(world[x][y]=="?" or world[x][y]=="?"):
+                    lootable(0.1,"Dark Shard",0)
+                    if(random.random()>0.5):
+                        entercombat("@Fantacy",0)
+                if(world[x][y]=="~" or world[x][y]=="w"):
+                    lootable(0.7,"Water",10)
+                if(world[x][y]=="x"):
+                    world[x][y]=" "
+                    lootable(0.9,"Firepit",0)
+                if(world[x][y]=="X"):
+                    world[x][y]=" "
+                    lootable(0.9,"Campfire",0)
+                if(world[x][y]=="A"):
+                    defaultlootable()
+                    lootable(0.01,"Ore",1)
+                    odds=random.random()
+                    if(odds<0.01):
+                        chestlootable()
+            elif(useitem=="CANCER"):
+                cancercheck();
+            elif(useitem=="MAKESHIFTAXE"):
+                if(world[x][y]=="t" or world[x][y]=="T"):
+                    odds=random.random()
+                    if(odds<0.1):
+                        inventory[finditem("MAKESHIFTAXE")][1]-=1
+                        print("It breaks")
+                    lootable(1,"Wood",10)
+                    if(world[x][y]=="t"):
+                        world[x][y]=" "
+                    if(world[x][y]=="T"):
+                        lootable(1,"Wood",5)
+                        world[x][y]="t"
+            elif(useitem=="IRONAXE"):
+                if(world[x][y]=="t" or world[x][y]=="T"):
+                    odds=random.random()
+                    if(odds<0.01):
+                        inventory[finditem("IRONAXE")][1]-=1
+                        print("It breaks")
+                    lootable(1,"Wood",20)
+                    if(world[x][y]=="t"):
+                        world[x][y]=" "
+                    if(world[x][y]=="T"):
+                        lootable(1,"Wood",10)
+                        world[x][y]="t"
+            elif(useitem=="EMPTYBOTTLE"):
+                if(world[x][y]=="~" or world[x][y]=="w"):
+                lootable(0.9,"Water",10)
+            elif(useitem=="NOTE"):
+                print("You read the note")
+                print("<------------------->")
+                print("The end is the devil")
+                print("The devil has come,")
+                print("With blood to fire,")  
+                print("The end has come,")
+                print("With Blood to fire")
+                print("The end shall go")
+                print("With Blood to fire")
+                print("<------------------->")
+            elif(useitem=="BLOOD"):
+                if(world[x][y] == "X"):
+                    print("The mysterious note did say 'Blood to fire'...")
+                    print("Do you cut your arm?")
+                    cut=input()
+                if(variableify(cut)[0]=="Y"):
+                    print("You cut your arm")
+                    addstuff("Open Wound",1)
+                    print("Some blood drips onto the campfire")
+                    endgame()
+                else:
+                    print("You change your mind, probally a good idea")
 
-           elif(useitem=="TORCH"):
-               if(world[x][y]=="t" or world[x][y]=="T"):
-                   odds=random.random()
-                   inventory[finditem("TORCH")][1]-=1
-                   print("You torch the tree, Why?")
-                   if(world[x][y]=="t"):
-                       world[x][y]=" "
-                   if(world[x][y]=="T"):
-                       world[x][y]="t"
-                   lootable(1,"Ash",50)
-           elif(useitem=="BLOODSYRINGE"):
-               inventory[finditem("BLOODSYRINGE")][1]-=1
-               print("The blood syringe makes you recover blood")
-               inventory[finditem("Blood")][1] += 50/modifier
-           elif(useitem=="DISINFECTANT"):
-               if(finditem("INFECTION") != -1):
-                   inventory[finditem("DISINFECTANT")][1]-=1
-                   print("The disinfectant hurts your infection")
-                   inventory[finditem("INFECTION")][1] -= round((random.random()*250)/modifier)
-                   if(inventory[finditem("INFECTION")][1] < 0):
-                       inventory[finditem("INFECTION")][1] = 0
-           elif(useitem=="TORCH"):
-               if(world[x][y]=="t" or world[x][y]=="T"):
-                   odds=random.random()
-                   inventory[finditem("TORCH")][1]-=1
-                   print("You torch the tree, Why?")
-                   if(world[x][y]=="t"):
-                       world[x][y]=" "
-                   if(world[x][y]=="T"):
-                       world[x][y]="t"
-                   lootable(1,"Ash",50)
-           elif(useitem=="DARKSACRIFICE"):
+            elif(useitem=="TORCH"):
+                if(world[x][y]=="t" or world[x][y]=="T"):
+                    odds=random.random()
+                    inventory[finditem("TORCH")][1]-=1
+                    print("You torch the tree, Why?")
+                    if(world[x][y]=="t"):
+                        world[x][y]=" "
+                    if(world[x][y]=="T"):
+                        world[x][y]="t"
+                    lootable(1,"Ash",50)
+            elif(useitem=="BLOODSYRINGE"):
+                inventory[finditem("BLOODSYRINGE")][1]-=1
+                print("The blood syringe makes you recover blood")
+                inventory[finditem("Blood")][1] += 50/modifier
+            elif(useitem=="DISINFECTANT"):
+                if(finditem("INFECTION") != -1):
+                    inventory[finditem("DISINFECTANT")][1]-=1
+                    print("The disinfectant hurts your infection")
+                    inventory[finditem("INFECTION")][1] -= round((random.random()*250)/modifier)
+                    if(inventory[finditem("INFECTION")][1] < 0):
+                        inventory[finditem("INFECTION")][1] = 0
+            elif(useitem=="TORCH"):
+                if(world[x][y]=="t" or world[x][y]=="T"):
+                    odds=random.random()
+                    inventory[finditem("TORCH")][1]-=1
+                    print("You torch the tree, Why?")
+                    if(world[x][y]=="t"):
+                        world[x][y]=" "
+                    if(world[x][y]=="T"):
+                        world[x][y]="t"
+                    lootable(1,"Ash",50)
+            elif(useitem=="DARKSACRIFICE"):
                 print("You prepare a sacrifice to the Devil")
                 if(world[x][y]=="x" or world[x][y]=="X"):
-                   print("A sacrifice of blood is required")
-                   print("Do you cut your arm?")
-                   cut=input()
-                   if(variableify(cut)[0]=="Y"):
-                       print("You cut your arm")
-                       addstuff("Open Wound",1)
-                       print("Do you want to please the Devil more?")
-                       please=input()
-                       favor=1
-                       while(variableify(please)[0]=="Y"):
-                           print("You let more blood drip from your arm")
-                           bloodloss(1)
-                           favor+=1
-                           print("Do you want to please the Devil more?")
-                           please=input()
-                       print("What do you pray for:")
-                       prayers=["rain","good health","items","food","survival","darkness","xp"]
-                       if((finditem("curse of slowness")!=-1 and inventory[finditem("curse of slowness")>=1]) or (finditem("curse of hunger")!=-1 and inventory[finditem("curse of hunger")]>=1) or (finditem("curse of thirst")!=-1 and inventory[finditem("curse of thirst")]>=1) or (finditem("curse of haunting")!=-1 and inventory[finditem("curse of haunting")]>=1) or (finditem("curse of bloodloss")!=-1 and inventory[finditem("curse of bloodloss")]>=1) or (finditem("curse of wounds")!=-1 and inventory[finditem("curse of wounds")>=1]) or (finditem("curse of curses")!=-1 and inventory[finditem("curse of curses")>=1]) or (finditem("curse of blindness")!=-1 and inventory[finditem("curse of blindness")>=1])):
-                           prayers.append("a curse removal")
-                       for i in range(len(prayers)):
-                           print(str(i)+" : "+prayers[i])
-                       badprayer=True
-                       while(badprayer):
-                           prayer=input("I pray for ")
-                           for i in range(len(prayers)):
-                               if(prayer==prayers[i]):
-                                   prayer="Devil! give me "+prayer
-                                   badprayer=False
-                               if(prayer==str(i)):
-                                   prayer="Devil! give me "+prayers[i]
-                                   badprayer=False
-                       print("You chant \""+prayer+"\"")
-                       if(random.random()*modifier>0.5*favor):
-                           print("You get no response")
-                       else:
-                           print("You suddenly hear a rush of air...")
-                           if(prayer=="Devil! give me rain"):
-                               print("Suddenly it starts to rain, you gulp it up")
-                               addstuff("Water",int(round((random.random()*100*favor)/modifier)))
-                               for xx in range(height):
-                                   for yy in range(width):
-                                       if(random.random()*favor>0.9*modifier):
-                                           if(world[xx][yy]=="~"):
-                                               world[xx][yy]="w"
-                                           if(world[xx][yy]==" "):
-                                               world[xx][yy]="~"
-                           if(prayer=="Devil! give me xp!"):
-                              print("Suddenly, you are filled with power!")
-                              addstuff("XP",int(round((random.random()*100*favor)/modifier)))
-                           if(prayer=="Devil! give me items"):
-                               print("Suddenly around you you see boxes!")
-                               addstuff("Loot Kit",int(round((random.random()*10*favor)/modifier)))
-                           if(prayer=="Devil! give me survival"):
-                               addstuff("Dark Amulet",1)
-                               print("You hear a voice speak to you")
-                               print("This shall allow you to avoid my wraith once")
-                               print("You get a Dark Amulet")
-                           if(prayer=="Devil! give me food"):
-                               print("Forests perfect for hunting suddenly grow, Food appears out of knowhere")
-                               addstuff("Food",int(round((random.random()*100*favor)/modifier)))
-                               for xx in range(height):
-                                   for yy in range(width):
-                                       if(random.random()*favor>0.9*modifier):
-                                           if(world[xx][yy]=="t"):
-                                               world[xx][yy]="T"
-                                           if(world[xx][yy]==" "):
-                                               world[xx][yy]="t"
-                           if(prayer=="Devil! give me darkness"):
-                               print("A flood of darkness infects the area")
-                               addstuff("Dark Shard",10+int(round((random.random()*25*favor)/modifier)))
-                               for xx in range(height):
-                                   for yy in range(width):
-                                       if(random.random()>math.pow(0.95,(favor/modifier))):
-                                           if(world[xx][yy]==" "):
-                                               world[xx][yy]="?"
-                           if(prayer=="Devil! give me good health"):
-                               print("You feel wounds heal, food, water and blood enter your vains")
-                               if(inventory[finditem("Blood")][1]<100):
-                                   inventory[finditem("Blood")][1]=100
-                               if(inventory[finditem("Food")][1]<100):
-                                   inventory[finditem("Food")][1]=100
-                               if(inventory[finditem("Water")][1]<100):
-                                   inventory[finditem("Water")][1]=100
-                               if(finditem("Open Wound")!=-1 and inventory[finditem("Open Wound")][1]>=1):
-                                   inventory[finditem("Open Wound")][1]=0
-                               if(finditem("Scar")!=-1 and inventory[finditem("Scar")][1]>=1):
-                                   inventory[finditem("Scar")][1]=0
-                               if(finditem("Venom")!=-1 and inventory[finditem("Venom")][1]>=1):
-                                   inventory[finditem("Venom")][1]=0
-                               if(finditem("Infection")!=-1 and inventory[finditem("Infection")][1]>=1):
-                                   inventory[finditem("Infection")][1]=0
-                           if(prayer=="Devil! give me a curse removal"):
-                               if(finditem("curse of haunting")!=-1 and inventory[finditem("curse of haunting")][1]>=1):
-                                   inventory[finditem("curse of haunting")][1]=0
-                               if(finditem("curse of slowness")!=-1 and inventory[finditem("curse of slowness")][1]>=1):
-                                   inventory[finditem("curse of slowness")][1]=0
-                               if(finditem("curse of bloodloss")!=-1 and inventory[finditem("curse of bloodloss")][1]>=1):
-                                   inventory[finditem("curse of bloodloss")][1]=0
-                               if(finditem("curse of wounds")!=-1 and inventory[finditem("curse of wounds")][1]>=1):
-                                   inventory[finditem("curse of wounds")][1]=0
-                               if(finditem("curse of hunger")!=-1 and inventory[finditem("curse of hunger")][1]>=1):
-                                   inventory[finditem("curse of hunger")][1]=0
-                               if(finditem("curse of thirst")!=-1 and inventory[finditem("curse of thirst")][1]>=1):
-                                   inventory[finditem("curse of thirst")][1]=0
-                               if(finditem("curse of insanity")!=-1 and inventory[finditem("curse of insanity")][1]>=1):
-                                   inventory[finditem("curse of insanity")][1]=0
-                               if(finditem("curse of curses")!=-1 and inventory[finditem("curse of curses")][1]>=1):
-                                   inventory[finditem("curse of curses")][1]=0
-                               if(finditem("curse of blindness")!=-1 and inventory[finditem("curse of blindness")][1]>=1):
-                                   inventory[finditem("curse of blindness")][1]=0
-                           inventory[finditem("Dark Sacrifice")][1]-=1
-                   else:
-                       print("You don't wound yourself, probably a good move")
+                    print("A sacrifice of blood is required")
+                    print("Do you cut your arm?")
+                    cut=input()
+                    if(variableify(cut)[0]=="Y"):
+                        print("You cut your arm")
+                        addstuff("Open Wound",1)
+                        print("Do you want to please the Devil more?")
+                        please=input()
+                        favor=1
+                        while(variableify(please)[0]=="Y"):
+                            print("You let more blood drip from your arm")
+                            bloodloss(1)
+                            favor+=1
+                            print("Do you want to please the Devil more?")
+                            please=input()
+                        print("What do you pray for:")
+                        prayers=["rain","good health","items","food","survival","darkness","xp"]
+                        if((finditem("curse of slowness")!=-1 and inventory[finditem("curse of slowness")>=1]) or (finditem("curse of hunger")!=-1 and inventory[finditem("curse of hunger")]>=1) or (finditem("curse of thirst")!=-1 and inventory[finditem("curse of thirst")]>=1) or (finditem("curse of haunting")!=-1 and inventory[finditem("curse of haunting")]>=1) or (finditem("curse of bloodloss")!=-1 and inventory[finditem("curse of bloodloss")]>=1) or (finditem("curse of wounds")!=-1 and inventory[finditem("curse of wounds")>=1]) or (finditem("curse of curses")!=-1 and inventory[finditem("curse of curses")>=1]) or (finditem("curse of blindness")!=-1 and inventory[finditem("curse of blindness")>=1])):
+                            prayers.append("a curse removal")
+                        for i in range(len(prayers)):
+                            print(str(i)+" : "+prayers[i])
+                        badprayer=True
+                        while(badprayer):
+                            prayer=input("I pray for ")
+                            for i in range(len(prayers)):
+                                if(prayer==prayers[i]):
+                                    prayer="Devil! give me "+prayer
+                                    badprayer=False
+                                if(prayer==str(i)):
+                                    prayer="Devil! give me "+prayers[i]
+                                    badprayer=False
+                        print("You chant \""+prayer+"\"")
+                        if(random.random()*modifier>0.5*favor):
+                            print("You get no response")
+                        else:
+                            print("You suddenly hear a rush of air...")
+                            if(prayer=="Devil! give me rain"):
+                                print("Suddenly it starts to rain, you gulp it up")
+                                addstuff("Water",int(round((random.random()*100*favor)/modifier)))
+                                for xx in range(height):
+                                    for yy in range(width):
+                                        if(random.random()*favor>0.9*modifier):
+                                            if(world[xx][yy]=="~"):
+                                                world[xx][yy]="w"
+                                            if(world[xx][yy]==" "):
+                                                world[xx][yy]="~"
+                            if(prayer=="Devil! give me xp!"):
+                                print("Suddenly, you are filled with power!")
+                                addstuff("XP",int(round((random.random()*100*favor)/modifier)))
+                            if(prayer=="Devil! give me items"):
+                                 print("Suddenly around you you see boxes!")
+                                 addstuff("Loot Kit",int(round((random.random()*10*favor)/modifier)))
+                            if(prayer=="Devil! give me survival"):
+                                 addstuff("Dark Amulet",1)
+                                 print("You hear a voice speak to you")
+                                 print("This shall allow you to avoid my wraith once")
+                                 print("You get a Dark Amulet")
+                            if(prayer=="Devil! give me food"):
+                                print("Forests perfect for hunting suddenly grow, Food appears out of knowhere")
+                                addstuff("Food",int(round((random.random()*100*favor)/modifier)))
+                                for xx in range(height):
+                                    for yy in range(width):
+                                        if(random.random()*favor>0.9*modifier):
+                                            if(world[xx][yy]=="t"):
+                                                world[xx][yy]="T"
+                                            if(world[xx][yy]==" "):
+                                                world[xx][yy]="t"
+                            if(prayer=="Devil! give me darkness"):
+                                print("A flood of darkness infects the area")
+                                addstuff("Dark Shard",10+int(round((random.random()*25*favor)/modifier)))
+                                for xx in range(height):
+                                    for yy in range(width):
+                                        if(random.random()>math.pow(0.95,(favor/modifier))):
+                                            if(world[xx][yy]==" "):
+                                                world[xx][yy]="?"
+                            if(prayer=="Devil! give me good health"):
+                                print("You feel wounds heal, food, water and blood enter your vains")
+                                if(inventory[finditem("Blood")][1]<100):
+                                    inventory[finditem("Blood")][1]=100
+                                if(inventory[finditem("Food")][1]<100):
+                                    inventory[finditem("Food")][1]=100
+                                if(inventory[finditem("Water")][1]<100):
+                                    inventory[finditem("Water")][1]=100
+                                if(finditem("Open Wound")!=-1 and inventory[finditem("Open Wound")][1]>=1):
+                                    inventory[finditem("Open Wound")][1]=0
+                                if(finditem("Scar")!=-1 and inventory[finditem("Scar")][1]>=1):
+                                    inventory[finditem("Scar")][1]=0
+                                if(finditem("Venom")!=-1 and inventory[finditem("Venom")][1]>=1):
+                                    inventory[finditem("Venom")][1]=0
+                                if(finditem("Infection")!=-1 and inventory[finditem("Infection")][1]>=1):
+                                    inventory[finditem("Infection")][1]=0
+                            if(prayer=="Devil! give me a curse removal"):
+                                if(finditem("curse of haunting")!=-1 and inventory[finditem("curse of haunting")][1]>=1):
+                                    inventory[finditem("curse of haunting")][1]=0
+                                if(finditem("curse of slowness")!=-1 and inventory[finditem("curse of slowness")][1]>=1):
+                                    inventory[finditem("curse of slowness")][1]=0
+                                if(finditem("curse of bloodloss")!=-1 and inventory[finditem("curse of bloodloss")][1]>=1):
+                                    inventory[finditem("curse of bloodloss")][1]=0
+                                if(finditem("curse of wounds")!=-1 and inventory[finditem("curse of wounds")][1]>=1):
+                                    inventory[finditem("curse of wounds")][1]=0
+                                if(finditem("curse of hunger")!=-1 and inventory[finditem("curse of hunger")][1]>=1):
+                                    inventory[finditem("curse of hunger")][1]=0
+                                if(finditem("curse of thirst")!=-1 and inventory[finditem("curse of thirst")][1]>=1):
+                                    inventory[finditem("curse of thirst")][1]=0
+                                if(finditem("curse of insanity")!=-1 and inventory[finditem("curse of insanity")][1]>=1):
+                                    inventory[finditem("curse of insanity")][1]=0
+                                if(finditem("curse of curses")!=-1 and inventory[finditem("curse of curses")][1]>=1):
+                                    inventory[finditem("curse of curses")][1]=0
+                                if(finditem("curse of blindness")!=-1 and inventory[finditem("curse of blindness")][1]>=1):
+                                    inventory[finditem("curse of blindness")][1]=0
+                            inventory[finditem("Dark Sacrifice")][1]-=1
+                    else:
+                        print("You don't wound yourself, probably a good move")
                 else:
-                   print("You require a fire pit to create sacrifices")
-           elif(useitem=="PICKAXE"):
-             if(world[x][y]=="A"):
-               lootable(0.9)
-           elif(useitem=="HERB"):
-               addstuff("Herb",-1)
-               print("You apply herbal treatments...")
-               if(finditem("Open Wound")!=-1 and random.random()>0.01*modifier and inventory[finditem("Open Wound")][1]>=1):
-                   inventory[finditem("Open Wound")][1]-=1
-                   print("You clean wounds")
-               if(finditem("Venom")!=-1 and random.random()>0.01*modifier and inventory[finditem("Venom")][1]>=1):
-                   inventory[finditem("Venom")][1]-=1
-                   print("You clear out your venom")
-               if(finditem("Infection")!=-1 and random.random()>0.01*modifier and inventory[finditem("Infection")][1]>=1):
-                   inventory[finditem("Infection")][1]-=1
-                   print("You apply the herb disinfectantly")
-               if(finditem("Radiation")!=-1 and random.random()>0.01*modifier and inventory[finditem("Radiation")][1]>=1):
-                   inventory[finditem("Radiation")][1]-=1
-                   print("You use the herb to absorb radiation")
-               if(inventory[finditem("Blood")][1]<=90):
-                   lootable(0.5,"Blood",5)
-           elif(useitem=="HEALINGSCROLL"):
-               addstuff("Healing Scroll",-1)
-               print("You speak the words on the scroll")
-               if(finditem("Open Wound")!=-1 and inventory[finditem("Open Wound")][1]>=1):
-                   if(modifier > 10):
-                     inventory[finditem("Open Wound")][1]-=5
-                   else:
-                     inventory[finditem("Open Wound")][1]-=15-modifier
-                   if(inventory[finditem("Open Wound")][1] < 0):
-                     inventory[finditem("Open Wound")][1] = 0
-                   print("You feel some wounds close")
-               if(finditem("Venom")!=-1 and inventory[finditem("Venom")][1]>=1):
-                   if(modifier > 10):
-                     inventory[finditem("Venom")][1]-=5
-                   else:
-                     inventory[finditem("Venom")][1]-=15-modifier
-                   if(inventory[finditem("Venom")][1] < 0):
-                     inventory[finditem("Venom")][1] = 0
-                   print("You feel the venom leave your system")
-               if(finditem("Infection")!=-1 and inventory[finditem("Infection")][1]>=1):
-                   inventory[finditem("INFECTION")][1] -= round((random.random()*250)/modifier)
-                   if(inventory[finditem("INFECTION")][1] < 0):
-                       inventory[finditem("INFECTION")][1] = 0
-                   print("You feel the infections leave your system")
-               if(finditem("Radiation")!=-1 and inventory[finditem("Radiation")][1]>=1):
-                   if(modifier > 10):
-                     inventory[finditem("Venom")][1]-=5
-                   else:
-                     inventory[finditem("Venom")][1]-=15-modifier
-                   if(inventory[finditem("Venom")][1] < 0):
-                     inventory[finditem("Venom")][1] = 0
-                   print("You feel the radiation leave your body")
-               if(finditem("Cancer")!=-1 and inventory[finditem("Cancer")][1]>=1):
-                   if(modifier > 10):
-                     inventory[finditem("Cancer")][1]-=5
-                   else:
-                     inventory[finditem("Cancer")][1]-=15-modifier
-                   if(inventory[finditem("Cancer")][1] < 0):
-                     inventory[finditem("Cancer")][1] = 0
-                   print("You feel the radiation leave your body")
-               lootable(1,"Blood",50)
-               if(inventory[finditem("Blood")][1]>=100):
-                 inventory[finditem("Blood")][1] = 100
-           elif(useitem=="RADIATIONTREATMENT"):
-             if(finditem("Radiation")!=-1 and inventory[finditem("Radiation")][1]>=1):
-                   addstuff("Radiation Treatment",-1)
-                   print("You apply the radiation treatment")
-                   print("You stab the treatment into your body")
-                   addstuff("Open Wound",1)
-                   print("It takes a tole on your body, but it fights the radiation")
-                   addstuff("Water",-modifier)
-                   addstuff("Food",-modifier)
-                   addstuff("Blood",-modifier)
-                   if(modifier > 9):
-                     inventory[finditem("Radiation")][1]-=1
-                   else:
-                     inventory[finditem("Radiation")][1]-=10-modifier
-                   if(inventory[finditem("Radiation")][1] < 0):
-                     inventory[finditem("Radiation")][1] = 0
-                     print("You no longer feel irradiated")
-           elif(useitem=="CANCERTREATMENT"):
-                   addstuff("Cancer Treatment",-1)
-                   print("You apply the Cancer treatment")
-                   print("You stab the treatment into your body")
-                   addstuff("Open Wound",1)
-                   print("It takes a tole on your body, but it fights the Cancer")
-                   addstuff("Water",-modifier)
-                   addstuff("Food",-modifier)
-                   addstuff("Blood",-modifier)
-                   if(modifier >= 10):
-                     inventory[finditem("Cancer")][1]-=1
-                   else:
-                     inventory[finditem("Cancer")][1]-=10-modifier
-                   if(inventory[finditem("Cancer")][1] < 0):
-                     inventory[finditem("Cancer")][1] = 0
-           elif(useitem=="DARKSHARD"):
-               if(world[x][y]=="t" or world[x][y]=="T"):
-                   odds=random.random()
-                   print("The Shard Consumes the tree, You feel as if that was not a good idea, The shard duplicates itself")
-                   if(world[x][y]=="t"):
-                       world[x][y]=" "
-                       lootable(1,"Dark Shard",0)
-                   if(world[x][y]=="T"):
-                       world[x][y]="t"
-                       lootable(1,"Dark Shard",0)
-                       lootable(1,"Dark Shard",0)
-                       lootable(1,"Dark Shard",0)
-           elif(useitem=="XP"):
-             if(world[x][y]=="|"):
-               print("You place your hands on the giant monolith in front of you")
-               print("Boons: ")
-               print("1) 20xp Hunger Boon. Food perminently decreses at lesser rate")
-               print("2) 20xp Thirst Boon. Water perminently decreses at a lesser rate")
-               print("3) 20xp Looting Boon. Items are sligtly easier to find")
-               print("4) 15xp Arrow Boon. Arrows have a small chance to do double damage")
-               print("5) 15xp Sword Boon. Swords have a small chance to do double damage")
-               print("6) 15xp Axe Boon. Axes have a small chance to do double damage")
-               print("7) 20xp Fire Boon. Fire has a higher chance to spread")
-               print("8) 20xp Crafting Boon. There is a lower chance to fail crafting recipies")
-               print("9) 15xp Flail Boon. Flails have a higher possible damage")
-               print("10) 15xp Ammo Boon. Ammunition has a small change to not be consumed on use")
-               print("11) 20xp Healing Boon. Healing items are sligtly more powerfull.")
-               print("12) 20xp Dodge Boon. There is a small chance to dodge a wounding.")
-               print("13) 25xp Unbreaking Boon. Items do not break as easily")
-               print("14) 15xp New Map. Simply regens the map. Unlike the map item, it does not effect dificulty")
-               print("15) 50xp Difficulty Decrease. The game gets marginally easier")
-               print("16) 25xp Difficulty Increase. The game gets marginally harder")
-               print("17) 10xp Loot kits. You get a loot kit. Thats all")
-               print("18) 10xp Coins. You get 50 Coins. Thats all")
-               print("19) 15xp Cure cancer. When bought, cancer is removed. No fuss, just gone")
-               print("20) 15xp Cure radiation. When bought, radiation is removed. No fuss, just gone")
-               print("21) 15xp Cure infections. When bought, infections are removed. No fuss, just gone")
-               print("22) 15xp Cure wounds. When bought, all wounds are removed. No fuss, just gone")
-               print("23) 20xp Curse Removal. When bought, one curse is removed. No fuss, just gone")
-               print("24) 20xp Blood Boon. Blood regens faster")
-               print("25) 20xp Coward Boon. Easier chance to flee")
-           elif(useitem=="MONOLITH"):
-              if(world[x][y]==" " or world[x][y]=="?"):
-                world[x][y] = "|"
-                addstuff("Monolith",-1)
-                print("You place the monolith... It stands tall and forboding, covered in markings")
-              else:
-                print("Monoliths can only be placed on empty ground or on wierd areas")
-           elif(useitem=="TICTACTOEBOARD"):
-               gameman(0)
-           elif(useitem=="COIN"):
-               gameman(1)
-           elif(useitem=="ANTICURSESCROLL"):
-               cursed = True;
-               if(finditem("curse of insanity")!=-1 and inventory[finditem("curse of insanity")][1]>=1):
-                   addstuff("curse of insanity",-1)
-                   cursed = False;
-               if(finditem("curse of blindness")!=-1 and inventory[finditem("curse of blindness")][1]>=1):
-                   addstuff("curse of blindness",-1)
-                   cursed = False;
-               if(finditem("curse of slowness")!=-1 and inventory[finditem("curse of slowness")][1]>=1):
-                   addstuff("curse of slowness",-1)
-                   cursed = False;
-               if(finditem("curse of curses")!=-1 and inventory[finditem("curse of curses")][1]>=1):
-                   addstuff("curse of curses",-1)
-                   cursed = False;
-               if(finditem("curse of hunger")!=-1 and inventory[finditem("curse of hunger")][1]>=1):
-                   addstuff("curse of hunger",-1)
-                   cursed = False;
-               if(finditem("curse of thirst")!=-1 and inventory[finditem("curse of thirst")][1]>=1):
-                   addstuff("curse of thirst",-1)
-                   cursed = False;
-               if(finditem("curse of haunting")!=-1 and inventory[finditem("curse of haunting")][1]>=1):
-                   addstuff("curse of haunting",-1)
-                   cursed = False;
-               if(not(cursed)):
-                   print("You are cured of curses...")
-                   addstuff("Anticurse Scroll",-1)
-               else:
-                   print("The scroll does nothing...")
-           elif(useitem=="MATCH"):
-               if(world[x][y]=="t" or world[x][y]=="T"):
-                   odds=random.random()
-                   inventory[finditem("MATCH")][1]-=1
-                   print("You torch the tree, Why?")
-                   if(world[x][y]=="t"):
-                       world[x][y]=" "
-                   if(world[x][y]=="T"):
-                       world[x][y]="t"
-                   lootable(1,"Ash",30)
-           elif(useitem=="TRAP"):
-               if(world[x][y]=="t" or world[x][y]=="T"):
-                   odds=random.random()
-                   if(odds<0.5):
-                       inventory[finditem("Trap")][1]-=1
-                   else:
-                       lootable(0.9,"Raw Food",15)
-           elif(useitem=="FISHINGROD"):
-               if(world[x][y]=="~" or world[x][y]=="w"):
-                   GoFish()
-           elif(useitem=="BONE"):
-               if(world[x][y]=="t" or world[x][y]=="T"):
-                   odds=random.random()
-                   if(odds<0.01):
-                       inventory[finditem("Bone")][1]-=1
-                   lootable(0.5,"Raw Food",3)
-           elif(useitem=="STICK"):
-               if(world[x][y]=="t" or world[x][y]=="T"):
-                   odds=random.random()
-                   if(odds<0.7):
-                       inventory[finditem("Stick")][1]-=1
-           elif(useitem=="FLOWERHEADWEAR"):
+                    print("You require a fire pit to create sacrifices")
+            elif(useitem=="PICKAXE"):
+                if(world[x][y]=="A"):
+                    lootable(0.9)
+            elif(useitem=="HERB"):
+                addstuff("Herb",-1)
+                print("You apply herbal treatments...")
+                if(finditem("Open Wound")!=-1 and random.random()>0.01*modifier and inventory[finditem("Open Wound")][1]>=1):
+                    inventory[finditem("Open Wound")][1]-=1
+                    print("You clean wounds")
+                if(finditem("Venom")!=-1 and random.random()>0.01*modifier and inventory[finditem("Venom")][1]>=1):
+                    inventory[finditem("Venom")][1]-=1
+                    print("You clear out your venom")
+                if(finditem("Infection")!=-1 and random.random()>0.01*modifier and inventory[finditem("Infection")][1]>=1):
+                    inventory[finditem("Infection")][1]-=1
+                    print("You apply the herb disinfectantly")
+                if(finditem("Radiation")!=-1 and random.random()>0.01*modifier and inventory[finditem("Radiation")][1]>=1):
+                    inventory[finditem("Radiation")][1]-=1
+                    print("You use the herb to absorb radiation")
+                if(inventory[finditem("Blood")][1]<=90):
+                    lootable(0.5,"Blood",5)
+            elif(useitem=="HEALINGSCROLL"):
+                addstuff("Healing Scroll",-1)
+                print("You speak the words on the scroll")
+                if(finditem("Open Wound")!=-1 and inventory[finditem("Open Wound")][1]>=1):
+                    if(modifier > 10):
+                        inventory[finditem("Open Wound")][1]-=5
+                    else:
+                        inventory[finditem("Open Wound")][1]-=15-modifier
+                    if(inventory[finditem("Open Wound")][1] < 0):
+                        inventory[finditem("Open Wound")][1] = 0
+                    print("You feel some wounds close")
+                if(finditem("Venom")!=-1 and inventory[finditem("Venom")][1]>=1):
+                    if(modifier > 10):
+                        inventory[finditem("Venom")][1]-=5
+                    else:
+                        inventory[finditem("Venom")][1]-=15-modifier
+                    if(inventory[finditem("Venom")][1] < 0):
+                        inventory[finditem("Venom")][1] = 0
+                    print("You feel the venom leave your system")
+                if(finditem("Infection")!=-1 and inventory[finditem("Infection")][1]>=1):
+                    inventory[finditem("INFECTION")][1] -= round((random.random()*250)/modifier)
+                    if(inventory[finditem("INFECTION")][1] < 0):
+                        inventory[finditem("INFECTION")][1] = 0
+                    print("You feel the infections leave your system")
+                if(finditem("Radiation")!=-1 and inventory[finditem("Radiation")][1]>=1):
+                    if(modifier > 10):
+                        inventory[finditem("Venom")][1]-=5
+                    else:
+                        inventory[finditem("Venom")][1]-=15-modifier
+                    if(inventory[finditem("Venom")][1] < 0):
+                        inventory[finditem("Venom")][1] = 0
+                    print("You feel the radiation leave your body")
+                if(finditem("Cancer")!=-1 and inventory[finditem("Cancer")][1]>=1):
+                    if(modifier > 10):
+                        inventory[finditem("Cancer")][1]-=5
+                    else:
+                        inventory[finditem("Cancer")][1]-=15-modifier
+                    if(inventory[finditem("Cancer")][1] < 0):
+                        inventory[finditem("Cancer")][1] = 0
+                    print("You feel the radiation leave your body")
+                lootable(1,"Blood",50)
+                if(inventory[finditem("Blood")][1]>=100):
+                    inventory[finditem("Blood")][1] = 100
+            elif(useitem=="RADIATIONTREATMENT"):
+                if(finditem("Radiation")!=-1 and inventory[finditem("Radiation")][1]>=1):
+                    addstuff("Radiation Treatment",-1)
+                    print("You apply the radiation treatment")
+                    print("You stab the treatment into your body")
+                    addstuff("Open Wound",1)
+                    print("It takes a tole on your body, but it fights the radiation")
+                    addstuff("Water",-modifier)
+                    addstuff("Food",-modifier)
+                    addstuff("Blood",-modifier)
+                    if(modifier > 9):
+                        inventory[finditem("Radiation")][1]-=1
+                    else:
+                        inventory[finditem("Radiation")][1]-=10-modifier
+                    if(inventory[finditem("Radiation")][1] < 0):
+                        inventory[finditem("Radiation")][1] = 0
+                        print("You no longer feel irradiated")
+            elif(useitem=="CANCERTREATMENT"):
+                    addstuff("Cancer Treatment",-1)
+                    print("You apply the Cancer treatment")
+                    print("You stab the treatment into your body")
+                    addstuff("Open Wound",1)
+                    print("It takes a tole on your body, but it fights the Cancer")
+                    addstuff("Water",-modifier)
+                    addstuff("Food",-modifier)
+                    addstuff("Blood",-modifier)
+                    if(modifier >= 10):
+                        inventory[finditem("Cancer")][1]-=1
+                    else:
+                        inventory[finditem("Cancer")][1]-=10-modifier
+                    if(inventory[finditem("Cancer")][1] < 0):
+                        inventory[finditem("Cancer")][1] = 0
+            elif(useitem=="DARKSHARD"):
+                if(world[x][y]=="t" or world[x][y]=="T"):
+                    odds=random.random()
+                    print("The Shard Consumes the tree, You feel as if that was not a good idea, The shard duplicates itself")
+                    if(world[x][y]=="t"):
+                        world[x][y]=" "
+                        lootable(1,"Dark Shard",0)
+                    if(world[x][y]=="T"):
+                        world[x][y]="t"
+                        lootable(1,"Dark Shard",0)
+                        lootable(1,"Dark Shard",0)
+                        lootable(1,"Dark Shard",0)
+            elif(useitem=="XP"):
+                if(world[x][y]=="|"):
+                    print("You place your hands on the giant monolith in front of you")
+                    print("Boons: ")
+                    print("1) 20xp Hunger Boon. Food perminently decreses at lesser rate")
+                    print("2) 20xp Thirst Boon. Water perminently decreses at a lesser rate")
+                    print("3) 20xp Looting Boon. Items are sligtly easier to find")
+                    print("4) 15xp Arrow Boon. Arrows have a small chance to do double damage")
+                    print("5) 15xp Sword Boon. Swords have a small chance to do double damage")
+                    print("6) 15xp Axe Boon. Axes have a small chance to do double damage")
+                    print("7) 20xp Fire Boon. Fire has a higher chance to spread")
+                    print("8) 20xp Crafting Boon. There is a lower chance to fail crafting recipies")
+                    print("9) 15xp Flail Boon. Flails have a higher possible damage")
+                    print("10) 15xp Ammo Boon. Ammunition has a small change to not be consumed on use")
+                    print("11) 20xp Healing Boon. Healing items are sligtly more powerfull.")
+                    print("12) 20xp Dodge Boon. There is a small chance to dodge a wounding.")
+                    print("13) 25xp Unbreaking Boon. Items do not break as easily")
+                    print("14) 15xp New Map. Simply regens the map. Unlike the map item, it does not effect dificulty")
+                    print("15) 50xp Difficulty Decrease. The game gets marginally easier")
+                    print("16) 25xp Difficulty Increase. The game gets marginally harder")
+                    print("17) 10xp Loot kits. You get a loot kit. Thats all")
+                    print("18) 10xp Coins. You get 50 Coins. Thats all")
+                    print("19) 15xp Cure cancer. When bought, cancer is removed. No fuss, just gone")
+                    print("20) 15xp Cure radiation. When bought, radiation is removed. No fuss, just gone")
+                    print("21) 15xp Cure infections. When bought, infections are removed. No fuss, just gone")
+                    print("22) 15xp Cure wounds. When bought, all wounds are removed. No fuss, just gone")
+                    print("23) 20xp Curse Removal. When bought, one curse is removed. No fuss, just gone")
+                    print("24) 20xp Blood Boon. Blood regens faster")
+                    print("25) 20xp Coward Boon. Easier chance to flee")
+            elif(useitem=="MONOLITH"):
+                if(world[x][y]==" " or world[x][y]=="?"):
+                    world[x][y] = "|"
+                    addstuff("Monolith",-1)
+                    print("You place the monolith... It stands tall and forboding, covered in markings")
+                else:
+                    print("Monoliths can only be placed on empty ground or on wierd areas")
+            elif(useitem=="TICTACTOEBOARD"):
+                gameman(0)
+            elif(useitem=="COIN"):
+                gameman(1)
+            elif(useitem=="ANTICURSESCROLL"):
+                cursed = True
+                if(finditem("curse of insanity")!=-1 and inventory[finditem("curse of insanity")][1]>=1):
+                    addstuff("curse of insanity",-1)
+                    cursed = False
+                if(finditem("curse of blindness")!=-1 and inventory[finditem("curse of blindness")][1]>=1):
+                    addstuff("curse of blindness",-1)
+                    cursed = False
+                if(finditem("curse of slowness")!=-1 and inventory[finditem("curse of slowness")][1]>=1):
+                    addstuff("curse of slowness",-1)
+                    cursed = False
+                if(finditem("curse of curses")!=-1 and inventory[finditem("curse of curses")][1]>=1):
+                    addstuff("curse of curses",-1)
+                    cursed = False
+                if(finditem("curse of hunger")!=-1 and inventory[finditem("curse of hunger")][1]>=1):
+                    addstuff("curse of hunger",-1)
+                    cursed = False
+                if(finditem("curse of thirst")!=-1 and inventory[finditem("curse of thirst")][1]>=1):
+                    addstuff("curse of thirst",-1)
+                    cursed = False
+                if(finditem("curse of haunting")!=-1 and inventory[finditem("curse of haunting")][1]>=1):
+                    addstuff("curse of haunting",-1)
+                    cursed = False
+                if(not(cursed)):
+                    print("You are cured of curses...")
+                    addstuff("Anticurse Scroll",-1)
+                else:
+                    print("The scroll does nothing...")
+            elif(useitem=="MATCH"):
+                if(world[x][y]=="t" or world[x][y]=="T"):
+                    odds=random.random()
+                    inventory[finditem("MATCH")][1]-=1
+                    print("You torch the tree, Why?")
+                    if(world[x][y]=="t"):
+                        world[x][y]=" "
+                    if(world[x][y]=="T"):
+                        world[x][y]="t"
+                    lootable(1,"Ash",30)
+            elif(useitem=="TRAP"):
+                if(world[x][y]=="t" or world[x][y]=="T"):
+                    odds=random.random()
+                    if(odds<0.5):
+                        inventory[finditem("Trap")][1]-=1
+                    else:
+                        lootable(0.9,"Raw Food",15)
+            elif(useitem=="FISHINGROD"):
+                if(world[x][y]=="~" or world[x][y]=="w"):
+                    GoFish()
+            elif(useitem=="BONE"):
+                if(world[x][y]=="t" or world[x][y]=="T"):
+                    odds=random.random()
+                    if(odds<0.01):
+                        inventory[finditem("Bone")][1]-=1
+                    lootable(0.5,"Raw Food",3)
+            elif(useitem=="STICK"):
+                if(world[x][y]=="t" or world[x][y]=="T"):
+                    odds=random.random()
+                    if(odds<0.7):
+                        inventory[finditem("Stick")][1]-=1
+            elif(useitem=="FLOWERHEADWEAR"):
                 print("You stare at the pretty flower headress, It makes you feel better")
                 if(finditem("curse of insanity") and inventory[finditem("curse of insanity")][1]>=1):
                     addstuff("curse of insanity",-1)
                     print("A small part of you sanity returns to you")
-           elif(useitem=="FLOWER"):
+            elif(useitem=="FLOWER"):
                 print("You stare at the pretty flower, ",end="")
                 if(finditem("curse of insanity")!=-1 and inventory[finditem("curse of insanity")][1]>=1):
                     if(random.random()<=0.1*inventory[finditem("curse of insanity")][1]*modifier):
@@ -2976,94 +2977,94 @@ while(alive==1):
                         print("A small portion of your sanity comes back to you")
                         addstuff("curse of insanity",-1)
                 print()
-           elif(useitem=="BASKET"):
-               if(world[x][y]== "t" or world[x][y] == "T" or world[x][y] == " "):
-                   print("you forage for an hour")
-                   odds=random.random()
-                   if(odds<0.005*modifier):
-                       print("it breaks")
-                       inventory[finditem("Basket")][1]-=1
-                   if(odds>0.99):
-                       defaultlootable()
-                   if(odds>0.95):
-                       defaultlootable()
-                   if(odds>0.90):
-                       defaultlootable()
-                   if(odds>0.50):
-                       defaultlootable()
-                   if(world[x][y]=="t"):
-                       defaultlootable()
-                   if(world[x][y]=="T"):
-                       defaultlootable()
-                       defaultlootable()
-                   defaultlootable()
-               elif(world[x][y] == "A"):
-                   lootable(0.05,"Ore",5)
-                   odds=random.random()
-                   if(odds<0.01):
-                       chestlootable()
-               elif(world[x][y] == "~" or world[x][y] == "w"):
-                   lootable(0.9,"Water",30)
-           elif(useitem=="MAKESHIFTBASKET"):
-               if(world[x][y]=="t" or world[x][y]=="T" or world[x][y]==" "):
-                   print("you forage for an hour")
-                   odds=random.random()
-                   if(odds<0.01*modifier):
-                       print("it breaks")
-                       inventory[finditem("Makeshift Basket")][1]-=1
-                   if(world[x][y]=="t"):
-                       defaultlootable()
-                   if(world[x][y]=="T"):
-                       defaultlootable()
-                       if(odds>0.90):
-                           defaultlootable()
-                   if(odds>0.80):
-                           defaultlootable()
-               elif(world[x][y] == "~" or world[x][y] == "w"):
-                   lootable(0.8,"Water",20)
-           elif(useitem=="Coin"):
-               if(world[x][y]=="X" or world[x][y]=="x"):
-                   shopkeep()
-           elif(useitem=="LOOTKIT"):
-               print("The chest destroys itself, But there is some rubble nearby!")
-               chestlootable()
-               inventory[finditem("Loot Kit")][1]-=1
-           elif(useitem=="CAMPFIRE"):
-               if(world[x][y]==" "):
-                       world[x][y]="X"
-                       inventory[finditem("Campfire")][1]-=1
-                       print("You place your campfire")
-           elif(useitem=="FIREPIT"):
-               if(world[x][y]==" "):
-                       world[x][y]="x"
-                       inventory[finditem("Firepit")][1]-=1
-                       print("You place your firepit")
-           elif(useitem=="PAPER"):
-                    inventory[finditem("Paper")][1]-=1
-                    print("You draw a map")
-                    addstuff("Map Fragment",1)
-           elif(useitem=="MAP"):
-                    inventory[finditem("Map")][1]-=1
-                    print("You leave your current area, to a new, harder, zone")
-                    passtime(modifier)
-                    modifier=modifier+1
-                    redraworld()
-           elif(useitem=="TINDER"):
-               if(world[x][y]=="x"):
-                   inventory[finditem("Tinder")][1]-=1
-                   print("You use up your tinder")
-                   world[x][y]="X"
-               elif(world[x][y]=="t" or world[x][y]=="T"):
-                   inventory[finditem("Tinder")][1]-=1
-                   print("You use up your tinder")
-                   print("You torch the tree, Why?")
-                   if(world[x][y]=="t"):
-                       world[x][y]=" "
-                   if(world[x][y]=="T"):
-                       world[x][y]="t"
-                   lootable(1,"Ash",20)
-           elif(useitem=="RAWFOOD"):
-               if(world[x][y]=="X" or world[x][y]=="H"):
+            elif(useitem=="BASKET"):
+                if(world[x][y]== "t" or world[x][y] == "T" or world[x][y] == " "):
+                    print("you forage for an hour")
+                    odds=random.random()
+                    if(odds<0.005*modifier):
+                        print("it breaks")
+                        inventory[finditem("Basket")][1]-=1
+                    if(odds>0.99):
+                        defaultlootable()
+                    if(odds>0.95):
+                        defaultlootable()
+                    if(odds>0.90):
+                        defaultlootable()
+                    if(odds>0.50):
+                        defaultlootable()
+                    if(world[x][y]=="t"):
+                        defaultlootable()
+                    if(world[x][y]=="T"):
+                        defaultlootable()
+                        defaultlootable()
+                    defaultlootable()
+                elif(world[x][y] == "A"):
+                    lootable(0.05,"Ore",5)
+                    odds=random.random()
+                    if(odds<0.01):
+                        chestlootable()
+                elif(world[x][y] == "~" or world[x][y] == "w"):
+                    lootable(0.9,"Water",30)
+            elif(useitem=="MAKESHIFTBASKET"):
+                if(world[x][y]=="t" or world[x][y]=="T" or world[x][y]==" "):
+                    print("you forage for an hour")
+                    odds=random.random()
+                    if(odds<0.01*modifier):
+                        print("it breaks")
+                        inventory[finditem("Makeshift Basket")][1]-=1
+                    if(world[x][y]=="t"):
+                        defaultlootable()
+                    if(world[x][y]=="T"):
+                        defaultlootable()
+                        if(odds>0.90):
+                            defaultlootable()
+                    if(odds>0.80):
+                            defaultlootable()
+                elif(world[x][y] == "~" or world[x][y] == "w"):
+                    lootable(0.8,"Water",20)
+            elif(useitem=="Coin"):
+                if(world[x][y]=="X" or world[x][y]=="x"):
+                    shopkeep()
+            elif(useitem=="LOOTKIT"):
+                print("The chest destroys itself, But there is some rubble nearby!")
+                chestlootable()
+                inventory[finditem("Loot Kit")][1]-=1
+            elif(useitem=="CAMPFIRE"):
+                if(world[x][y]==" "):
+                    world[x][y]="X"
+                    inventory[finditem("Campfire")][1]-=1
+                    print("You place your campfire")
+            elif(useitem=="FIREPIT"):
+                if(world[x][y]==" "):
+                    world[x][y]="x"
+                    inventory[finditem("Firepit")][1]-=1
+                    print("You place your firepit")
+            elif(useitem=="PAPER"):
+                inventory[finditem("Paper")][1]-=1
+                print("You draw a map")
+                addstuff("Map Fragment",1)
+            elif(useitem=="MAP"):
+                inventory[finditem("Map")][1]-=1
+                print("You leave your current area, to a new, harder, zone")
+                passtime(modifier)
+                modifier=modifier+1
+                redraworld()
+            elif(useitem=="TINDER"):
+                if(world[x][y]=="x"):
+                    inventory[finditem("Tinder")][1]-=1
+                    print("You use up your tinder")
+                    world[x][y]="X"
+                elif(world[x][y]=="t" or world[x][y]=="T"):
+                    inventory[finditem("Tinder")][1]-=1
+                    print("You use up your tinder")
+                    print("You torch the tree, Why?")
+                    if(world[x][y]=="t"):
+                        world[x][y]=" "
+                    if(world[x][y]=="T"):
+                        world[x][y]="t"
+                    lootable(1,"Ash",20)
+            elif(useitem=="RAWFOOD"):
+                if(world[x][y]=="X" or world[x][y]=="H"):
                     print("How much do you want to cook?")
                     cookcount=input()
                     while(not(len(cookcount)!=0 and (cookcount[0]=="0" or cookcount[0]=="1" or cookcount[0]=="2" or cookcount[0]=="3" or cookcount[0]=="4" or cookcount[0]=="5" or cookcount[0]=="6" or cookcount[0]=="7" or cookcount[0]=="8" or cookcount[0]=="9"))):
@@ -3086,176 +3087,176 @@ while(alive==1):
                                       addstuff("Food",1)
                                 inventory[finditem("Raw Food")][1]-=1
                         passtime(1+round(cookcount/10))
-               else:
-                   print("You look at the raw food... Eww")
-                   print("How much raw food do you try to eat?")
-                   cookcount=input()
-                   while(not(len(cookcount)!=0 and (cookcount[0]=="0" or cookcount[0]=="1" or cookcount[0]=="2" or cookcount[0]=="3" or cookcount[0]=="4" or cookcount[0]=="5" or cookcount[0]=="6" or cookcount[0]=="7" or cookcount[0]=="8" or cookcount[0]=="9"))):
-                       cookcount=input()
-                   cookcount=int(cookcount)
-                   if(cookcount <= 0):
-                       print("You back down, the disqust and risk puts you off")
-                   else:
-                       print("You look at your 'meal', And begin to eat")
-                       for i in range(cookcount):
-                           if(random.random()<0.01*modifier):
-                               print("That was infected!")
-                               addstuff("Infection",1)
-                           else:
-                               print("Gross, and not very filling!")
-                               addstuff("Food",0.5)
-                       passtime(1+round(cookcount/10)) 
-           elif(useitem=="ORE"):
-               if(world[x][y]=="X"):
-                       world[x][y]="x"
-                       print("You attempt to refine raw ore, over a campfire")
-                       lootable(0.1,"Iron Bar",0)
-                       lootable(0.1,"Chain",3)
-                       lootable(0.01,"Dark Shard",0)
-                       lootable(0.01,"Coin",15)
-                       lootable(0.01,"Emerald",0)
-                       passtime(1)
-           elif(useitem == "WATERSCROLL"):
-               addstuff("Water Scroll",-1)
-               print("You read the text from the scroll, The world begins to rain heavily, before quickly stopping")
-               addstuff("Water",round(1/modifier*1000*random.random()))
-               if(world[x][y]==" "):
-                   world[x][y] = "~"
-               if(modifier>9):
-                   py = round(random.random()*(height-1))
-                   px = round(random.random()*(width-1))
-                   if(world[px][py]==" "):
-                       world[px][py] = "~"
-               else:
-                   for i in range(int(random.random()*5*(10-modifier))):
-                       py = round(random.random()*(height-1))
-                       px = round(random.random()*(width-1))
-                       if(world[px][py]==" "):
-                           world[px][py] = "~"
-           elif(useitem == "FOODSCROLL"):
-               print("You read the text from the scroll, A giant hoard of food is materialized in front of you")
-               addstuff("Food Scroll",-1)
-               addstuff("Food",round(1/modifier*1000*random.random()))
-           elif(useitem == "WEALTHSCROLL"):
-               print("You read the text from the scroll, gold and loot kits pour from the air")
-               addstuff("Wealth Scroll",-1)
-               addstuff("Coin",round(1/modifier*500*random.random()))
-               addstuff("Loot Kit",round(1/modifier*50*random.random()))
-           elif(useitem == "PLANTSCROLL"):
-               addstuff("Plant Scroll",-1)
-               print("You read the text from the scroll, magical flowers are launched into the air")
-               if(world[x][y]=="t"):
-                   world[x][y] = "T"
-               if(world[x][y]==" "):
-                   world[x][y] = "t"
-               if(modifier>9):
-                   py = round(random.random()*(height-1))
-                   px = round(random.random()*(width-1))
-                   if(world[px][py]=="t"):
-                       world[px][py] = "T"
-                   if(world[px][py]==" "):
-                       world[px][py] = "t"
-               else:
-                   for i in range(int(random.random()*5*(10-modifier))):
-                       py = round(random.random()*(height-1))
-                       px = round(random.random()*(width-1))
-                       if(world[px][py]=="t"):
-                           world[px][py] = "T"
-                       if(world[px][py]==" "):
-                           world[px][py] = "t"
-           elif(useitem=="HIDE"):
-               if(world[x][y]=="X"):
-                       world[x][y]="x"
-                       print("You attempt to cook the hide into leather")
-                       lootable(0.1,"Leather",0)
-                       passtime(1)
-               if(world[x][y]=="H"):
-                       world[x][y]="h"
-                       print("You attempt to cook the hide into leather")
-                       lootable(0.5,"Leather",3)
-                       passtime(1)
-           elif(useitem=="BANDAGE"):
-               if(finditem("Open Wound")==-1 or inventory[finditem("Open Wound")][1]==0):
-                   print("You have no open wounds")
-               else:
-                   print("You bandage one of your wounds")
-                   inventory[finditem("Open Wound")][1]-=1
-                   inventory[finditem("Bandage")][1]-=1
-                   addstuff("Scar",1)
-           else:
+                else:
+                    print("You look at the raw food... Eww")
+                    print("How much raw food do you try to eat?")
+                    cookcount=input()
+                    while(not(len(cookcount)!=0 and (cookcount[0]=="0" or cookcount[0]=="1" or cookcount[0]=="2" or cookcount[0]=="3" or cookcount[0]=="4" or cookcount[0]=="5" or cookcount[0]=="6" or cookcount[0]=="7" or cookcount[0]=="8" or cookcount[0]=="9"))):
+                        cookcount=input()
+                    cookcount=int(cookcount)
+                    if(cookcount <= 0):
+                        print("You back down, the disqust and risk puts you off")
+                    else:
+                        print("You look at your 'meal', And begin to eat")
+                        for i in range(cookcount):
+                            if(random.random()<0.01*modifier):
+                                print("That was infected!")
+                                addstuff("Infection",1)
+                            else:
+                                print("Gross, and not very filling!")
+                                addstuff("Food",0.5)
+                        passtime(1+round(cookcount/10)) 
+            elif(useitem=="ORE"):
+                if(world[x][y]=="X"):
+                    world[x][y]="x"
+                    print("You attempt to refine raw ore, over a campfire")
+                    lootable(0.1,"Iron Bar",0)
+                    lootable(0.1,"Chain",3)
+                    lootable(0.01,"Dark Shard",0)
+                    lootable(0.01,"Coin",15)
+                    lootable(0.01,"Emerald",0)
+                    passtime(1)
+            elif(useitem == "WATERSCROLL"):
+                addstuff("Water Scroll",-1)
+                print("You read the text from the scroll, The world begins to rain heavily, before quickly stopping")
+                addstuff("Water",round(1/modifier*1000*random.random()))
+                if(world[x][y]==" "):
+                    world[x][y] = "~"
+                if(modifier>9):
+                    py = round(random.random()*(height-1))
+                    px = round(random.random()*(width-1))
+                    if(world[px][py]==" "):
+                        world[px][py] = "~"
+                else:
+                    for i in range(int(random.random()*5*(10-modifier))):
+                        py = round(random.random()*(height-1))
+                        px = round(random.random()*(width-1))
+                        if(world[px][py]==" "):
+                            world[px][py] = "~"
+            elif(useitem == "FOODSCROLL"):
+                print("You read the text from the scroll, A giant hoard of food is materialized in front of you")
+                addstuff("Food Scroll",-1)
+                addstuff("Food",round(1/modifier*1000*random.random()))
+            elif(useitem == "WEALTHSCROLL"):
+                print("You read the text from the scroll, gold and loot kits pour from the air")
+                addstuff("Wealth Scroll",-1)
+                addstuff("Coin",round(1/modifier*500*random.random()))
+                addstuff("Loot Kit",round(1/modifier*50*random.random()))
+            elif(useitem == "PLANTSCROLL"):
+                addstuff("Plant Scroll",-1)
+                print("You read the text from the scroll, magical flowers are launched into the air")
+                if(world[x][y]=="t"):
+                    world[x][y] = "T"
+                if(world[x][y]==" "):
+                    world[x][y] = "t"
+                if(modifier>9):
+                    py = round(random.random()*(height-1))
+                    px = round(random.random()*(width-1))
+                    if(world[px][py]=="t"):
+                        world[px][py] = "T"
+                    if(world[px][py]==" "):
+                        world[px][py] = "t"
+                else:
+                    for i in range(int(random.random()*5*(10-modifier))):
+                        py = round(random.random()*(height-1))
+                        px = round(random.random()*(width-1))
+                        if(world[px][py]=="t"):
+                            world[px][py] = "T"
+                        if(world[px][py]==" "):
+                            world[px][py] = "t"
+            elif(useitem=="HIDE"):
+                if(world[x][y]=="X"):
+                        world[x][y]="x"
+                        print("You attempt to cook the hide into leather")
+                        lootable(0.1,"Leather",0)
+                        passtime(1)
+                if(world[x][y]=="H"):
+                        world[x][y]="h"
+                        print("You attempt to cook the hide into leather")
+                        lootable(0.5,"Leather",3)
+                        passtime(1)
+            elif(useitem=="BANDAGE"):
+                if(finditem("Open Wound")==-1 or inventory[finditem("Open Wound")][1]==0):
+                    print("You have no open wounds")
+                else:
+                    print("You bandage one of your wounds")
+                    inventory[finditem("Open Wound")][1]-=1
+                    inventory[finditem("Bandage")][1]-=1
+                    addstuff("Scar",1)
+            else:
                 print("Nothing happends, Maybe try using something else")
-           print("You are done using your "+useitem)
+            print("You are done using your "+useitem)
     else:
-       print("What you typed was not a command, For help say 'ask a command'")
+        print("What you typed was not a command, For help say 'ask a command'")
     print()
 print()
 getinventory()
 print()
 print("You lived for "+str(totalhours)+" hours, ", end = "")
 if(totalhours*modifier > 3100):
-  print("You were a god")
+    print("You were a god")
 elif(totalhours*modifier > 3000):
-  print("You were practically a god")
+    print("You were practically a god")
 elif(totalhours*modifier > 2900):
-  print("You were a demi-god")
+    print("You were a demi-god")
 elif(totalhours*modifier > 2800):
-  print("You were practically a demi-god")
+    print("You were practically a demi-god")
 elif(totalhours*modifier > 2700):
-  print("How did you live that long?")
+    print("How did you live that long?")
 elif(totalhours*modifier > 2600):
-  print("You were unrealisticly good")
+    print("You were unrealisticly good")
 elif(totalhours*modifier > 2500):
-  print("You were really impressively good")
+    print("You were really impressively good")
 elif(totalhours*modifier > 2400):
-  print("You were impressively good")
+    print("You were impressively good")
 elif(totalhours*modifier > 2300):
-  print("You were almost impressively good")
+    print("You were almost impressively good")
 elif(totalhours*modifier > 2200):
-  print("You were really,really good")
+    print("You were really,really good")
 elif(totalhours*modifier > 2100):
-  print("You were really good")
+    print("You were really good")
 elif(totalhours*modifier > 2000):
-  print("You were really quite good")
+    print("You were really quite good")
 elif(totalhours*modifier > 1900):
-  print("You were quite good")
+    print("You were quite good")
 elif(totalhours*modifier > 1800):
-  print("You were good")
+    print("You were good")
 elif(totalhours*modifier > 1700):
-  print("You were slightly good")
+    print("You were slightly good")
 elif(totalhours*modifier > 1600):
-  print("You were okay")
+    print("You were okay")
 elif(totalhours*modifier > 1500):
-  print("You were okay, at best")
+    print("You were okay, at best")
 elif(totalhours*modifier > 1400):
-  print("You were meh")
+    print("You were meh")
 elif(totalhours*modifier > 1300):
-  print("You were meh, at best")
+    print("You were meh, at best")
 elif(totalhours*modifier > 1200):
-  print("You did not do good")
+    print("You did not do good")
 elif(totalhours*modifier > 1100):
-  print("You really did not do good")
+    print("You really did not do good")
 elif(totalhours*modifier > 1000):
-  print("You really did not do good, at best")
+    print("You really did not do good, at best")
 elif(totalhours*modifier > 900):
-  print("You really did not do good, at all")
+    print("You really did not do good, at all")
 elif(totalhours*modifier > 800):
-  print("you did horribly")
+    print("you did horribly")
 elif(totalhours*modifier > 700):
-  print("you did horribly, at best")
+    print("you did horribly, at best")
 elif(totalhours*modifier > 600):
-  print("You did very horribly")
+    print("You did very horribly")
 elif(totalhours*modifier > 500):
-  print("You did very horribly, at best")
+    print("You did very horribly, at best")
 elif(totalhours*modifier > 400):
-  print("You did very, impressibly, horribly.")
+    print("You did very, impressibly, horribly.")
 elif(totalhours*modifier > 300):
-  print("You did very, impressibly, horribly, at best")
+    print("You did very, impressibly, horribly, at best")
 elif(totalhours*modifier > 200):
-  print("You were word-record breakingly horrible!")
+    print("You were word-record breakingly horrible!")
 elif(totalhours*modifier > 100):
-  print("You were word-record breakingly horrible, at best!")
+    print("You were word-record breakingly horrible, at best!")
 else:
-  print("How did you even die that fast?")
+    print("How did you even die that fast?")
 print("So the story ends: With you very very dead")
 special = 1
 while(special == 1):
