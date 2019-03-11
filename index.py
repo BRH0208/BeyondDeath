@@ -1,4 +1,3 @@
-#'Survival Game'(Name WIP). By Bryce Hawken with assistance and ideas from his family and friends(who playtested the game). The entire game is WIP. If you wish to contact me with ideas. Then email bryce@hawken.net 
 import random
 import math
 import time
