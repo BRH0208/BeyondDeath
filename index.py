@@ -1,5 +1,5 @@
 #'Survival Game'(Name WIP). By Bryce Hawken with assistance and ideas from his family and friends(who playtested the game). The entire game is WIP. If you wish to contact me with ideas. Then email bryce@hawken.net 
-#Most recent change: Added basic boon implementation
+#Ninja Update
 import random
 import math
 import time
@@ -1038,7 +1038,7 @@ def traveler():
   print("I probally feel the same fellow human")
   if(finditem("curse of insanity")!=-1 and inventory[finditem("curse of insanity")][1] <= 50):
     print("You see the 'human' turn into a cow.")
-    print("The cowbot looks to be made of flowers")
+    print("The cow looks to be made of flowers")
     print("You have no idea what is going on")
     lootable(1,"Flower",0)
   elif(finditem("Open Wound")!=-1 and inventory[finditem("Open Wound")][1] >= 1):
