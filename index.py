@@ -25,27 +25,30 @@ print("7: Extreme")
 print("8: Master")
 print("9: Insane")
 print("10+ Impossible")
-invalidmodifier=-1
-while(invalidmodifier==1 or invalidmodifier==-1):
-    if(invalidmodifier==1):
-        print("That is not valid")
-    invalidmodifier=0
-    modifier=input()
-    if(len(modifier)==0):
-        invalidmodifier=1
-    else:
-        valid="0123456789"
-        c=0
-        for a in range(len(modifier)):
-            for b in range(len(valid)):
-                if(modifier[a]==valid[b]):
-                    c=c+1
-        if(c!=len(modifier)):
-            invalidmodifier=1
+
+def valid(String):
+    item=String
+    invalid=-1
+    while(invalid==1 or invalid==-1):
+        invalid=0
+        if(len(item)==0):
+            invalid=1
         else:
-            if(modifier=="0"):
-                invalidmodifier=1
-modifier=float(modifier)
+            valid="0123456789"
+            c=0
+            for a in range(len(item)):
+                for b in range(len(valid)):
+                    if(item[a]==valid[b]):
+                        c=c+1
+            if(c!=len(item)):
+                invalid=1
+            else:
+                if(item=="0"):
+                    invalid=1
+        if(invalid==1 or invalid==-1):
+            item=input()
+    return item
+modifier=float(valid(input()))
 
 def variableify(string):
     string=string.replace(" ", "")
@@ -666,14 +669,16 @@ def shopkeep():
             else:
                 print("You don't have any coins. He probably won't mind")
             print("Which one do you want to buy? Or just say nvm if you don't want to buy anything")
-            purchase=input("I'll take item number ")
-            while(len(purchase)==0):
-                print("What did you say?")
-                purchase=input("I'll take item number ")
+            print("I will take item number: ",end = "")
+            purchase = input()
             if(purchase=="nvm"):
                 print("Understandable. Come back some other time!")
-            elif(len(purchase) == 1 and (purchase[0]=="1" or purchase[0]=="2" or purchase[0]=="3" or purchase[0]=="4" or purchase[0]=="5" or purchase[0]=="6" or purchase[0]=="7" or purchase[0]=="8" or purchase[0]=="9")):
+            else:
+                purchase = valid(purchase)
                 purchase=int(purchase)-1
+                while(purchase>len(shop)):
+                    purchase = valid(purchase)
+                    purchase=int(purchase)-1
                 count=1
                 print("A "+shop[purchase][0]+"! Great choice")
                 if(shop[purchase][1]>1):
@@ -735,8 +740,6 @@ def shopkeep():
                         addstuff("Coin",1)
                 else:
                     print("Sorry, I outta leave now.")
-            else:
-                print("I don't know what you want, Next time, Tell me the item number you want to purchase")
 def craft(a,acount,b,bcount,c,count,f):
     if(not(finditem(a)==-1 or inventory[finditem(a)][1]<acount)):
         if(not(finditem(b)==-1 or inventory[finditem(b)][1]<bcount)):
@@ -1150,6 +1153,7 @@ def masscraft(a,b):
     docraft(a,b,"Hide Gloves",1,"Leather",1,"Leather Gloves",1,0)
     docraft(a,b,"Leather Gloves",1,"Chain",1,"Chain Gloves",1,0)
     docraft(a,b,"Chain Gloves",1,"Iron Bar",1,"Iron Gloves",1,0)
+    docraft(a,b,"Iron Bar",1,"Iron Bar",1,"Shuriken",25,0)
     docraft(a,b,"Dark Shard",10,"Raw Food",30,"Dark Sacrifice",1,0.2)
     docraft(a,b,"Ash",5,"Dark Shard",1,"Blood",25,0.1)
     docraft(a,b,"Bone",1,"Raw Food",1,"Dark Shard",1,0.1)
@@ -1219,10 +1223,10 @@ def addwound(wounds):
   if(finditem("Dodge Boon")!=-1 and inventory[finditem("Dodge Boon")][1]>=1):
     dodges = 0
     for i in range(hits):
-        if(random.random()<1-Math.pow(0.95,inventory[finditem("Dodge Boon")][1])):
+        if(random.random()<1-math.pow(0.95,inventory[finditem("Dodge Boon")][1])):
             dodges+=1
     hits-=dodges
-    print("You dodged "+dodges+" attacks")
+    print("You dodged "+int_to_en(dodges)+" attacks")
   if(finditem("curse of wounds")!=-1 and inventory[finditem("curse of wounds")][1]>=1):
     hits=hits*(inventory[finditem("curse of wounds")][1]+1)
   
@@ -1606,7 +1610,7 @@ def entercombat(entity,surprise):
         hp=30
         speed=5
         meat=0
-        xp=100
+        xp=50
         abilities=["slash"]
     if (entity=="rat"):
         hp=1
@@ -1714,6 +1718,8 @@ def entercombat(entity,surprise):
         speed=speed+inventory[finditem("curse of slowness")][1]
     conditions=[]
     leave=0
+    if(finditem("Speed Boon")!=-1 and inventory[finditem("Speed Boon")][1] > 0):
+        speed=speed*math.pow(9/10,inventory[finditem("Speed Boon")][1])
     while(hp>0 and leave==0 and alive==1):
         i=0
         while(i < len(conditions)):
@@ -2066,6 +2072,25 @@ def entercombat(entity,surprise):
                 hp=hp-3
             elif(useitem=="PICKAXE"):
                 hp=hp-(int(random.random()*modifier))-1
+            elif(useitem=="SHURIKEN"):
+                print("How many shurikens do you want to throw?")
+                print("You only have "+int_to_en(inventory[finditem("Shuriken")][1])+" shurikens")
+                item = input("I will throw ")
+                valid(item)
+                item = int(item)
+                if(item>inventory[finditem("Shuriken")][1]):
+                    item=inventory[finditem("Shuriken")][1]
+                    print("You only have "+int_to_en(inventory[finditem("Shuriken")][1])+" shurikens")
+                if(modifier>10):
+                    if(item > 20-(int(speed)+10)):
+                        item = 20-(int(speed)+10)
+                else:
+                    if(item > 20-(int(speed)+modifier)):
+                        item = 20-int(speed)+modifier
+                print("You throw "+int_to_en(item)+" Shurikens at 1 damage each!")
+                hp=hp-item
+                speed=speed*math.pow(0.995,item)
+                inventory[finditem("Shuriken")][1]=inventory[finditem("Shuriken")][1]-item
             elif(useitem=="HERB"):
                 addstuff("Herb",-1)
                 print("You apply herbal treatments...")
@@ -3255,16 +3280,17 @@ while(alive==1):
                print("13) 25xp Unbreaking Boon. Items do not break as easily")
                print("14) 25xp Blood Boon. Blood regens faster")
                print("15) 15xp Coward Boon. Easier chance to flee")
-               print("16) 15xp New Map. Simply regens the map. Unlike the map item, it does not effect dificulty")
-               print("17) 50xp Difficulty Decrease. The game gets marginally easier")
-               print("18) 25xp Difficulty Increase. The game gets marginally harder")
-               print("19) 10xp Loot kits. You get a loot kit. Thats all")
-               print("20) 10xp Coins. You get some Coins. Thats all")
-               print("21) 15xp Cure cancer. When bought, cancer is removed. No fuss, just gone")
-               print("22) 15xp Cure radiation. When bought, radiation is removed. No fuss, just gone")
-               print("23) 15xp Cure infections. When bought, infections are removed. No fuss, just gone")
-               print("24) 15xp Cure wounds. When bought, all wounds are removed. No fuss, just gone")
-               print("25) 20xp Curse Removal. When bought, one curse is removed. No fuss, just gone")
+               print("16) 25xp Speed Boon. The enimies speed is decreased slightly")
+               print("17) 15xp New Map. Simply regens the map. Unlike the map item, it does not effect dificulty")
+               print("18) 50xp Difficulty Decrease. The game gets marginally easier")
+               print("19) 25xp Difficulty Increase. The game gets marginally harder")
+               print("20) 10xp Loot kits. You get a loot kit. Thats all")
+               print("21) 10xp Coins. You get some Coins. Thats all")
+               print("22) 15xp Cure cancer. When bought, cancer is removed. No fuss, just gone")
+               print("23) 15xp Cure radiation. When bought, radiation is removed. No fuss, just gone")
+               print("24) 15xp Cure infections. When bought, infections are removed. No fuss, just gone")
+               print("25) 15xp Cure wounds. When bought, all wounds are removed. No fuss, just gone")
+               print("26) 20xp Curse Removal. When bought, one curse is removed. No fuss, just gone")
                invalid=-1
                while(invalid==1 or invalid==-1):
                     if(invalid==1):
@@ -3392,13 +3418,20 @@ while(alive==1):
                    else:
                        print("The obolisk begins to power up, before failing: Not enough XP")
                elif(item == 16):
+                   if(inventory[finditem("XP")][1] >= 25):
+                       addstuff("Speed Boon",1)
+                       addstuff("XP",-25)
+                       print("The obolisk powers up, and you now have the perk")
+                   else:
+                       print("The obolisk begins to power up, before failing: Not enough XP")
+               elif(item == 17):
                    if(inventory[finditem("XP")][1] >= 15):
                        addstuff("XP",-15)
                        redraworld()
                        print("The obolisk powers up, you are teleported to a whole new world")
                    else:
                        print("The obolisk begins to power up, before failing: Not enough XP")
-               elif(item == 17):
+               elif(item == 18):
                    if(inventory[finditem("XP")][1] >= 50):
                        if(modifier > 1):
                            modifier = modifier-1
@@ -3408,21 +3441,21 @@ while(alive==1):
                            print("The obolisk begins to power up, before failing: No lower dificulties")
                    else:
                        print("The obolisk begins to power up, before failing: Not enough XP")
-               elif(item == 18):
+               elif(item == 19):
                    if(inventory[finditem("XP")][1] >= 25):
                        addstuff("XP",-25)
                        modifier = modifier+1
                        print("The obolisk powers up, you feel the burdens of the world increase substantially")
                    else:
                        print("The obolisk begins to power up, before failing: Not enough XP")
-               elif(item == 19):
+               elif(item == 20):
                    if(inventory[finditem("XP")][1] >= 10):
                        addstuff("XP",-10)
                        addstuff("Loot Kit",1)
                        print("The obolisk powers up, you see an odd box appear out of the aether")
                    else:
                        print("The obolisk begins to power up, before failing: Not enough XP")
-               elif(item == 20):
+               elif(item == 21):
                    if(inventory[finditem("XP")][1] >= 25):
                        addstuff("XP",-25)
                        if(modifier < 10):
@@ -3432,28 +3465,28 @@ while(alive==1):
                        print("The obolisk powers up, you see a sack of coins appear infront of you")
                    else:
                        print("The obolisk begins to power up, before failing: Not enough XP")
-               elif(item == 21):
+               elif(item == 22):
                    if(inventory[finditem("XP")][1] >= 15):
                        addstuff("XP",-15)
                        if(finditem("Cancer") !=-1 and inventory[finditem("Cancer")][1] > 0):
                            inventory[finditem("Cancer")][1] = 0
                            print("The obolisk powers up, you fell the tumors simply pop out of existance")
                        print("The obolisk powers up, then nothing happends. Mostly since you don't have cancer")
-               elif(item == 22):
+               elif(item == 23):
                    if(inventory[finditem("XP")][1] >= 15):
                        addstuff("XP",-15)
                        if(finditem("Radiation") !=-1 and inventory[finditem("Radiation")][1] > 0):
                            inventory[finditem("Radiation")][1] = 0
                            print("The obolisk powers up, you fell the tumors simply pop out of existance")
                        print("The obolisk powers up, then nothing happends. Mostly since you don't have and radiation")
-               elif(item == 23):
+               elif(item == 24):
                    if(inventory[finditem("XP")][1] >= 15):
                        addstuff("XP",-15)
                        if(finditem("Infection") !=-1 and inventory[finditem("Infection")][1] > 0):
                            inventory[finditem("Infection")][1] = 0
                            print("The obolisk powers up, you fell the infections simply pop out of existance")
                        print("The obolisk powers up, then nothing happends. Mostly since you don't have any infections")
-               elif(item == 24):
+               elif(item == 25):
                    if(inventory[finditem("XP")][1] >= 15):
                        addstuff("XP",-15)
                        if(finditem("Open Wound") !=-1 and inventory[finditem("Open Wound")][1] > 0):
