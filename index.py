@@ -48,6 +48,221 @@ def valid(String):
 def variableify(string):
     string=string.replace(" ", "")
     return(string.upper())
+def redraworld():
+    global world
+    world=[]
+    for a in range(width):
+        world.append([])
+        for b in range(height):
+            if(random.random()<(1-(1/(5*modifier)))):
+                world[a].append(" ")
+            else:
+                number=random.random()
+                if(number<5/20):
+                    world[a].append("t")
+                elif(number<10/20):
+                    world[a].append("T")
+                elif(number<11/20):
+                    world[a].append("A")
+                elif(number<12/20):
+                    world[a].append("W")
+                elif(number<13/20):
+                    world[a].append("?")
+                elif(number<14/20):
+                    world[a].append("~")
+                elif(number<15/20):
+                    world[a].append("m")
+                elif(number<20/20):
+                    world[a].append("≈")
+                else:
+                    greatjob()
+    for i in range (5):
+        for a in range(width):
+            for b in range(height):
+                #Monolith
+                if(random.random() < 0.0005*(1/modifier)):
+                    if(a>0 and b>0 and a<width-1 and b<height-1):
+                        world[a-1][b] = "?"
+                        world[a][b] = "|"
+                        world[a+1][b] = "?"
+                        world[a][b-1] = "?"
+                        world[a][b+1] = "?"
+                #Lakes
+                if(world[a][b] == "W"):
+                    if(a>0 and random.random()>0.95):
+                        world[a-1][b] = "W"
+                    if(b>0 and random.random()>0.95):
+                        world[a][b-1] = "W"
+                    if(a<width-1 and random.random()>0.95):
+                        world[a+1][b] = "W"
+                    if(b<height-1 and random.random()>0.95):
+                        world[a][b+1] = "W"
+                if(world[a][b] == "W"):
+                    if(a>0 and world[a-1][b] == " "):
+                        world[a-1][b] = "~"
+                    if(b>0 and world[a][b-1] == " "):
+                        world[a][b-1] = "~"
+                    if(a<width-1 and world[a+1][b] == " "):
+                        world[a+1][b] = "~"
+                    if(b<height-1 and world[a][b+1] == " "):
+                        world[a][b+1] = "~"
+                if(world[a][b] == "~"):
+                    if(a>0 and world[a-1][b] == " " and random.random()>0.97):
+                        world[a-1][b] = "~"
+                    if(b>0 and world[a][b-1] == " " and random.random()>0.97):
+                        world[a][b-1] = "~"
+                    if(a<width-1 and world[a+1][b] == " " and random.random()>0.97):
+                        world[a+1][b] = "~"
+                    if(b<height-1 and world[a][b+1] == " " and random.random()>0.97):
+                        world[a][b+1] = "~"
+                #Mountains
+                if(world[a][b] == "A"):
+                    if(a>0 and random.random()>0.99):
+                        world[a-1][b] = "A"
+                    if(b>0 and random.random()>0.99):
+                        world[a][b-1] = "A"
+                    if(a<width-1 and random.random()>0.99):
+                        world[a+1][b] = "A"
+                    if(b<height-1 and random.random()>0.99):
+                        world[a][b+1] = "A"
+                if(world[a][b] == "A"):
+                    if(a>0 and random.random()>0.99):
+                        world[a-1][b] = "M"
+                    if(b>0 and random.random()>0.99):
+                        world[a][b-1] = "M"
+                    if(a<width-1 and random.random()>0.99):
+                        world[a+1][b] = "M"
+                    if(b<height-1 and random.random()>0.99):
+                        world[a][b+1] = "M"
+                if(world[a][b] == "M"):
+                    if(a>0 and random.random()>0.99):
+                        world[a-1][b] = "A"
+                    if(b>0 and random.random()>0.99):
+                        world[a][b-1] = "A"
+                    if(a<width-1 and random.random()>0.99):
+                        world[a+1][b] = "A"
+                    if(b<height-1 and random.random()>0.99):
+                        world[a][b+1] = "A"
+                if(world[a][b] == "M"):
+                    if(a>0 and random.random()>0.99):
+                        world[a-1][b] = "M"
+                    if(b>0 and random.random()>0.99):
+                        world[a][b-1] = "M"
+                    if(a<width-1 and random.random()>0.99):
+                        world[a+1][b] = "M"
+                    if(b<height-1 and random.random()>0.99):
+                        world[a][b+1] = "M"
+                if(world[a][b] == "M"):
+                    if(a>0 and random.random()>0.95):
+                        world[a-1][b] = "w"
+                    if(b>0 and random.random()>0.95):
+                        world[a][b-1] = "w"
+                    if(a<width-1 and random.random()>0.95):
+                        world[a+1][b] = "w"
+                    if(b<height-1 and random.random()>0.95):
+                        world[a][b+1] = "w"
+                if(world[a][b] == "w"):
+                    if(a>0 and random.random()>0.99):
+                        world[a-1][b] = "w"
+                    if(b>0 and random.random()>0.99):
+                        world[a][b-1] = "w"
+                    if(a<width-1 and random.random()>0.99):
+                        world[a+1][b] = "w"
+                    if(b<height-1 and random.random()>0.99):
+                        world[a][b+1] = "w"
+                #Light foresting
+                if(world[a][b] == "T"):
+                    if(a>0 and random.random()>0.99):
+                        world[a-1][b] = "T"
+                    if(b>0 and random.random()>0.99):
+                        world[a][b-1] = "T"
+                    if(a<width-1 and random.random()>0.99):
+                        world[a+1][b] = "T"
+                    if(b<height-1 and random.random()>0.99):
+                        world[a][b+1] = "T"
+                if(world[a][b] == "T"):
+                    if(a>0 and random.random()>0.95):
+                        world[a-1][b] = "t"
+                    if(b>0 and random.random()>0.95):
+                        world[a][b-1] = "t"
+                    if(a<width-1 and random.random()>0.95):
+                        world[a+1][b] = "t"
+                    if(b<height-1 and random.random()>0.95):
+                        world[a][b+1] = "t"
+                if(world[a][b] == "t"):
+                    if(a>0 and random.random()>0.99):
+                        world[a-1][b] = "T"
+                    if(b>0 and random.random()>0.99):
+                        world[a][b-1] = "T"
+                    if(a<width-1 and random.random()>0.99):
+                        world[a+1][b] = "T"
+                    if(b<height-1 and random.random()>0.99):
+                        world[a][b+1] = "T"
+                #Light deserting
+                if(world[a][b] == "≈"):
+                    if(a>0 and random.random()>1.1-modifier*0.03):
+                        world[a-1][b] = "≈"
+                    if(b>0 and random.random()>1.1-modifier*0.03):
+                        world[a][b-1] = "≈"
+                    if(a<width-1 and random.random()>1.1-modifier*0.03):
+                        world[a+1][b] = "≈"
+                    if(b<height-1 and random.random()>1.1-modifier*0.03):
+                        world[a][b+1] = "≈"
+                #Cleanup: Mountains and lakes side by side both barely makes sense, and looks TERRIBLE
+                if(world[a][b] == "W"):
+                    if(a>0 and world[a-1][b] == "A"):
+                        world[a][b] = "m"
+                    if(b>0 and world[a][b-1] == "A"):
+                        world[a][b] = "m"
+                    if(a<width-1 and world[a+1][b] == "A"):
+                        world[a][b] = "m"
+                    if(b<height-1 and world[a][b+1] == "A"):
+                        world[a][b] = "m"
+                if(world[a][b] == "~"):
+                    if(a>0 and world[a-1][b] == "A"):
+                        world[a][b] = "m"
+                    if(b>0 and world[a][b-1] == "A"):
+                        world[a][b] = "m"
+                    if(a<width-1 and world[a+1][b] == "A"):
+                        world[a][b] = "m"
+                    if(b<height-1 and world[a][b+1] == "A"):
+                        world[a][b] = "m"
+                if(world[a][b] == "W"):
+                    if(a>0 and world[a-1][b] == "M"):
+                        world[a][b] = "m"
+                    if(b>0 and world[a][b-1] == "M"):
+                        world[a][b] = "m"
+                    if(a<width-1 and world[a+1][b] == "M"):
+                        world[a][b] = "m"
+                    if(b<height-1 and world[a][b+1] == "M"):
+                        world[a][b] = "m"
+                if(world[a][b] == "~"):
+                    if(a>0 and world[a-1][b] == "M"):
+                        world[a][b] = "m"
+                    if(b>0 and world[a][b-1] == "M"):
+                        world[a][b] = "m"
+                    if(a<width-1 and world[a+1][b] == "M"):
+                        world[a][b] = "m"
+                    if(b<height-1 and world[a][b+1] == "M"):
+                        world[a][b] = "m"
+                if(world[a][b] == "W"):
+                    if(a>0 and world[a-1][b] == "w"):
+                        world[a][b] = "m"
+                    if(b>0 and world[a][b-1] == "w"):
+                        world[a][b] = "m"
+                    if(a<width-1 and world[a+1][b] == "w"):
+                        world[a][b] = "m"
+                    if(b<height-1 and world[a][b+1] == "w"):
+                        world[a][b] = "m"
+                if(world[a][b] == "~"):
+                    if(a>0 and world[a-1][b] == "w"):
+                        world[a][b] = "m"
+                    if(b>0 and world[a][b-1] == "w"):
+                        world[a][b] = "m"
+                    if(a<width-1 and world[a+1][b] == "w"):
+                        world[a][b] = "m"
+                    if(b<height-1 and world[a][b+1] == "w"):
+                        world[a][b] = "m"
 def loadsave():
     print("Loading")
     if(os.path.isfile('./save.txt')):
@@ -4105,221 +4320,6 @@ def chestlootable():
     lootable(0.01, "Radiation Suit",0)
     lootable(0.05, "Makeshift Radiation Suit",0)
     lootable(0.05, "Cancer Treatment",0)
-def redraworld():
-    global world
-    world=[]
-    for a in range(width):
-        world.append([])
-        for b in range(height):
-            if(random.random()<(1-(1/(5*modifier)))):
-                world[a].append(" ")
-            else:
-                number=random.random()
-                if(number<5/20):
-                    world[a].append("t")
-                elif(number<10/20):
-                    world[a].append("T")
-                elif(number<11/20):
-                    world[a].append("A")
-                elif(number<12/20):
-                    world[a].append("W")
-                elif(number<13/20):
-                    world[a].append("?")
-                elif(number<14/20):
-                    world[a].append("~")
-                elif(number<15/20):
-                    world[a].append("m")
-                elif(number<20/20):
-                    world[a].append("≈")
-                else:
-                    greatjob()
-    for i in range (5):
-        for a in range(width):
-            for b in range(height):
-                #Monolith
-                if(random.random() < 0.0005*(1/modifier)):
-                    if(a>0 and b>0 and a<width-1 and b<height-1):
-                        world[a-1][b] = "?"
-                        world[a][b] = "|"
-                        world[a+1][b] = "?"
-                        world[a][b-1] = "?"
-                        world[a][b+1] = "?"
-                #Lakes
-                if(world[a][b] == "W"):
-                    if(a>0 and random.random()>0.95):
-                        world[a-1][b] = "W"
-                    if(b>0 and random.random()>0.95):
-                        world[a][b-1] = "W"
-                    if(a<width-1 and random.random()>0.95):
-                        world[a+1][b] = "W"
-                    if(b<height-1 and random.random()>0.95):
-                        world[a][b+1] = "W"
-                if(world[a][b] == "W"):
-                    if(a>0 and world[a-1][b] == " "):
-                        world[a-1][b] = "~"
-                    if(b>0 and world[a][b-1] == " "):
-                        world[a][b-1] = "~"
-                    if(a<width-1 and world[a+1][b] == " "):
-                        world[a+1][b] = "~"
-                    if(b<height-1 and world[a][b+1] == " "):
-                        world[a][b+1] = "~"
-                if(world[a][b] == "~"):
-                    if(a>0 and world[a-1][b] == " " and random.random()>0.97):
-                        world[a-1][b] = "~"
-                    if(b>0 and world[a][b-1] == " " and random.random()>0.97):
-                        world[a][b-1] = "~"
-                    if(a<width-1 and world[a+1][b] == " " and random.random()>0.97):
-                        world[a+1][b] = "~"
-                    if(b<height-1 and world[a][b+1] == " " and random.random()>0.97):
-                        world[a][b+1] = "~"
-                #Mountains
-                if(world[a][b] == "A"):
-                    if(a>0 and random.random()>0.99):
-                        world[a-1][b] = "A"
-                    if(b>0 and random.random()>0.99):
-                        world[a][b-1] = "A"
-                    if(a<width-1 and random.random()>0.99):
-                        world[a+1][b] = "A"
-                    if(b<height-1 and random.random()>0.99):
-                        world[a][b+1] = "A"
-                if(world[a][b] == "A"):
-                    if(a>0 and random.random()>0.99):
-                        world[a-1][b] = "M"
-                    if(b>0 and random.random()>0.99):
-                        world[a][b-1] = "M"
-                    if(a<width-1 and random.random()>0.99):
-                        world[a+1][b] = "M"
-                    if(b<height-1 and random.random()>0.99):
-                        world[a][b+1] = "M"
-                if(world[a][b] == "M"):
-                    if(a>0 and random.random()>0.99):
-                        world[a-1][b] = "A"
-                    if(b>0 and random.random()>0.99):
-                        world[a][b-1] = "A"
-                    if(a<width-1 and random.random()>0.99):
-                        world[a+1][b] = "A"
-                    if(b<height-1 and random.random()>0.99):
-                        world[a][b+1] = "A"
-                if(world[a][b] == "M"):
-                    if(a>0 and random.random()>0.99):
-                        world[a-1][b] = "M"
-                    if(b>0 and random.random()>0.99):
-                        world[a][b-1] = "M"
-                    if(a<width-1 and random.random()>0.99):
-                        world[a+1][b] = "M"
-                    if(b<height-1 and random.random()>0.99):
-                        world[a][b+1] = "M"
-                if(world[a][b] == "M"):
-                    if(a>0 and random.random()>0.95):
-                        world[a-1][b] = "w"
-                    if(b>0 and random.random()>0.95):
-                        world[a][b-1] = "w"
-                    if(a<width-1 and random.random()>0.95):
-                        world[a+1][b] = "w"
-                    if(b<height-1 and random.random()>0.95):
-                        world[a][b+1] = "w"
-                if(world[a][b] == "w"):
-                    if(a>0 and random.random()>0.99):
-                        world[a-1][b] = "w"
-                    if(b>0 and random.random()>0.99):
-                        world[a][b-1] = "w"
-                    if(a<width-1 and random.random()>0.99):
-                        world[a+1][b] = "w"
-                    if(b<height-1 and random.random()>0.99):
-                        world[a][b+1] = "w"
-                #Light foresting
-                if(world[a][b] == "T"):
-                    if(a>0 and random.random()>0.99):
-                        world[a-1][b] = "T"
-                    if(b>0 and random.random()>0.99):
-                        world[a][b-1] = "T"
-                    if(a<width-1 and random.random()>0.99):
-                        world[a+1][b] = "T"
-                    if(b<height-1 and random.random()>0.99):
-                        world[a][b+1] = "T"
-                if(world[a][b] == "T"):
-                    if(a>0 and random.random()>0.95):
-                        world[a-1][b] = "t"
-                    if(b>0 and random.random()>0.95):
-                        world[a][b-1] = "t"
-                    if(a<width-1 and random.random()>0.95):
-                        world[a+1][b] = "t"
-                    if(b<height-1 and random.random()>0.95):
-                        world[a][b+1] = "t"
-                if(world[a][b] == "t"):
-                    if(a>0 and random.random()>0.99):
-                        world[a-1][b] = "T"
-                    if(b>0 and random.random()>0.99):
-                        world[a][b-1] = "T"
-                    if(a<width-1 and random.random()>0.99):
-                        world[a+1][b] = "T"
-                    if(b<height-1 and random.random()>0.99):
-                        world[a][b+1] = "T"
-                #Light deserting
-                if(world[a][b] == "≈"):
-                    if(a>0 and random.random()>1.1-modifier*0.03):
-                        world[a-1][b] = "≈"
-                    if(b>0 and random.random()>1.1-modifier*0.03):
-                        world[a][b-1] = "≈"
-                    if(a<width-1 and random.random()>1.1-modifier*0.03):
-                        world[a+1][b] = "≈"
-                    if(b<height-1 and random.random()>1.1-modifier*0.03):
-                        world[a][b+1] = "≈"
-                #Cleanup: Mountains and lakes side by side both barely makes sense, and looks TERRIBLE
-                if(world[a][b] == "W"):
-                    if(a>0 and world[a-1][b] == "A"):
-                        world[a][b] = "m"
-                    if(b>0 and world[a][b-1] == "A"):
-                        world[a][b] = "m"
-                    if(a<width-1 and world[a+1][b] == "A"):
-                        world[a][b] = "m"
-                    if(b<height-1 and world[a][b+1] == "A"):
-                        world[a][b] = "m"
-                if(world[a][b] == "~"):
-                    if(a>0 and world[a-1][b] == "A"):
-                        world[a][b] = "m"
-                    if(b>0 and world[a][b-1] == "A"):
-                        world[a][b] = "m"
-                    if(a<width-1 and world[a+1][b] == "A"):
-                        world[a][b] = "m"
-                    if(b<height-1 and world[a][b+1] == "A"):
-                        world[a][b] = "m"
-                if(world[a][b] == "W"):
-                    if(a>0 and world[a-1][b] == "M"):
-                        world[a][b] = "m"
-                    if(b>0 and world[a][b-1] == "M"):
-                        world[a][b] = "m"
-                    if(a<width-1 and world[a+1][b] == "M"):
-                        world[a][b] = "m"
-                    if(b<height-1 and world[a][b+1] == "M"):
-                        world[a][b] = "m"
-                if(world[a][b] == "~"):
-                    if(a>0 and world[a-1][b] == "M"):
-                        world[a][b] = "m"
-                    if(b>0 and world[a][b-1] == "M"):
-                        world[a][b] = "m"
-                    if(a<width-1 and world[a+1][b] == "M"):
-                        world[a][b] = "m"
-                    if(b<height-1 and world[a][b+1] == "M"):
-                        world[a][b] = "m"
-                if(world[a][b] == "W"):
-                    if(a>0 and world[a-1][b] == "w"):
-                        world[a][b] = "m"
-                    if(b>0 and world[a][b-1] == "w"):
-                        world[a][b] = "m"
-                    if(a<width-1 and world[a+1][b] == "w"):
-                        world[a][b] = "m"
-                    if(b<height-1 and world[a][b+1] == "w"):
-                        world[a][b] = "m"
-                if(world[a][b] == "~"):
-                    if(a>0 and world[a-1][b] == "w"):
-                        world[a][b] = "m"
-                    if(b>0 and world[a][b-1] == "w"):
-                        world[a][b] = "m"
-                    if(a<width-1 and world[a+1][b] == "w"):
-                        world[a][b] = "m"
-                    if(b<height-1 and world[a][b+1] == "w"):
-                        world[a][b] = "m"
 def breakable(item,odds):
     if(finditem("Unbreaking Boon")!=-1 and (1+(inventory[finditem("Unbreaking Boon")][1]/4)) > 0):
         if(random.random()<odds*modifier/(1+(inventory[finditem("Unbreaking Boon")][1]/4))):
