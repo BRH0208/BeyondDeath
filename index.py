@@ -1,9 +1,24 @@
 # Beyond Death
-# Faction Update
+# Debug Update
+
+
+DEBUG_TYPE = 0 #This should be a constant, never changed during gameplay(Exept with debug commands)
+if(DEBUG_TYPE != 0):
+    print("Now Running Beyond Death! Debug level is currently "+str(DEBUG_TYPE))
+import time
+ProgramStartTime = time.time()
 import random
 import math
-import time
 import os
+
+DEBUG_NUM = 0 #This number is stupid, and only exists because I am stupid
+def DEBUGRUN(num, message):
+    global DEBUG_NUM
+    if(DEBUG_TYPE == num):
+        print(str(DEBUG_NUM)+") "+message+" ["+str(time.time() - ProgramStartTime)+"]")
+        DEBUG_NUM +=1
+
+DEBUGRUN(1,"Imports Completed")
 alive=1
 world=[]
 items = ["Brick","Radio","Vollyball","Crown","Fried Chicken","Apple Pie","HAPPY HAPPY HAPPY","Eye","Dress","T-Shirt","Human Leg","Wing","Stuff","Nonononononono","HUNGER","Missle","Arrow","Bullet","Pistol","Bow","Apple","Wasp","Bee","Tree","Mountain","IM NOT INSANE","NOT INSANE","NO INSANITY HERE","Computer","Sandwhich","Glass of Water","Milk Pitcher","Burger","Cheeseburger","Cannon","Army","Sanity","HELLO!","Friend","Winston","HAHAHAHA","FUNFUNFUN","?","Unknown","Wheel","Castle","Wall","Iron Bar","Buttlerfly","Unicorn","Pickle","Map","Iron Axe","Makeshift Axe","Makeshift Spear","Trash Can","Apples","Fire","Open Wound","Fire Bottle","Empty Bottle","curse of curses","curse of slowness","curse of blindness","curse of hunger","curse of thirst","curse of bloodloss","Dark Shard","Scar","Food","Water","Bandage","Venom","Infection","Map","Paper Towel","Disinfectant","Paper","Death Amulet","Spoon","Spork","Football","Soccerball","Baseball","Flail","Knife","Gold","Ore","Stick","Wood","Stone","Hide","Leather","Tenticle"]
@@ -49,6 +64,7 @@ def variableify(string):
     string=string.replace(" ", "")
     return(string.upper())
 def redraworld():
+    DEBUGRUN(1,"Redrawing World")
     global world
     world=[]
     for a in range(width):
@@ -76,6 +92,7 @@ def redraworld():
                     world[a].append("≈")
                 else:
                     greatjob()
+    DEBUGRUN(1,"Basic World Redrawn")
     for i in range (5):
         for a in range(width):
             for b in range(height):
@@ -263,6 +280,7 @@ def redraworld():
                         world[a][b] = "m"
                     if(b<height-1 and world[a][b+1] == "w"):
                         world[a][b] = "m"
+    DEBUGRUN(1,"World Redrawn")
 def loadsave():
     print("Loading")
     if(os.path.isfile('./save.txt')):
@@ -294,6 +312,7 @@ def loadsave():
     else:
         print("No save found")
         return False
+DEBUGRUN(1,"Initisation Complete")
 if(os.path.isfile('./save.txt')):
     print("Do you want to continue from the save?(Y/N)")
     doload = variableify(input())
@@ -301,9 +320,11 @@ if(os.path.isfile('./save.txt')):
         print("Startup Loading...")
         loadsave()
     else:
+        DEBUGRUN(1,"Starting without Saving")
         startup = True
 else:
     startup = True
+DEBUGRUN(1,"Save Status: Complete")
 if(startup):
     print("-What difficulty do you want?-")
     print()
@@ -492,11 +513,14 @@ if(startup):
     print("So, good luck! Try not to die")
     print()
     print()
+    print()
     redraworld()
+    DEBUGRUN(1,"Starting Shop Maintenence")
     for i in range(len(possibleshop)):
         possibleshop[i][2]=round(((modifier/2)*possibleshop[i][2]))
         if(possibleshop[i][2] <= 0):
             possibleshop[i][2]=1
+DEBUGRUN(1,"Startup Complete")
 def GoFish():
     print("You Go fish")
     print("Hit enter, Wait 8 secounds, then hit enter. The closer you get the more food")
@@ -3387,6 +3411,7 @@ def deathcheck():
                 alive=1
                 modifier+=1
                 addstuff("Devil's Contract",1)
+    DEBUGRUN(1,"Deathcheck Ending")
 def strangedevice():
     print("It is an odd, reflective oval.")
     print("What do you want to do")
@@ -5913,6 +5938,7 @@ def addstuff(item,count):
         inventory.append([item,count])
     getinvalid(inventory)
 def draworld():
+    DEBUGRUN(1,"Drawing World")
     todraw = ""
     todraw += ("+"*(width+2)) + "\n"
     for b in range(height):
@@ -5970,6 +5996,7 @@ def identify (item):
         else:
             return("unknown")
 print()
+DEBUGRUN(1,"Starting Main Loop")
 while(alive==1):
     #This is the command prompt's basic handler
     a=input("I ")
@@ -5982,12 +6009,15 @@ while(alive==1):
             i = i - 1
         i = i + 1
     deathcheck()
+    DEBUGRUN(1,"Running Command '"+a+"'")
     if(a=="LOOK"):
+        DEBUGRUN(1,"'LOOK' registered")
         if((finditem("curse of blindness")==-1 or inventory[finditem("curse of blindness")][1] <= 0)):
             draworld()
         else:
             print("You are blind,")
     elif(a=="INSPECT"):
+        DEBUGRUN(1,"'INSPECT' registered")
         if((finditem("curse of blindness")==-1 or inventory[finditem("curse of blindness")][1] <= 0)):
            if(len(sections)>1):
                b=" ".join(sections[1:len(sections)])
@@ -6027,6 +6057,7 @@ while(alive==1):
         else:
             print("You are blind,")
     elif(a=="MOVE"):
+       DEBUGRUN(1,"'MOVE' Registered")
        origx = x
        origy = y
        if(len(sections)>1):
@@ -6110,6 +6141,7 @@ while(alive==1):
              print("You walk")
              passtime(8)
     elif(a=="ASK"):
+        DEBUGRUN(1,"'ASK' Registered")
         if(len(sections)>1):
            b=" ".join(sections[1:len(sections)])
            b=variableify(b)
@@ -6151,16 +6183,20 @@ while(alive==1):
         else:
             print("That is not a valid command. Say 'ask a command' in the main prompt to get a list of commands")
     elif(a=="INVENTORY"):
+       DEBUGRUN(1,"'INVENTORY' Registered")
        getinventory()
     elif(a=="SAVE"):
+       DEBUGRUN(1,"'SAVE' Registered")
        print("Saving")
        f = open("save.txt", "w", encoding="utf-8")
        f.write("_SV_"+str(modifier)+"_SV_"+str(x)+"_SV_"+str(y)+"_SV_"+str(totalhours)+"_SV_"+str(shopfeel)+"_SV_"+str(shop)+"_SV_"+str(possibleshop)+"_SV_"+str(world)+"_SV_"+str(inventory)+"_SV_")
        f.close()
        print("Saved to file")
     elif(a=="LOAD"):
+        DEBUGRUN(1,"'LOAD' Registered")
         loadsave()
     elif(a=="HUNT"):
+       DEBUGRUN(1,"'HUNT' Registered")
        if(world[x][y]=="T"):
            print("You wait an hour for a creature to come by,")
            passtime(1)
@@ -6187,11 +6223,13 @@ while(alive==1):
        else:
            print("You do not see anything to hunt")
     elif(a=="OBSERVE"):
+       DEBUGRUN(1,"'OBSERVE' Registered")
        if((finditem("curse of blindness")==-1 or inventory[finditem("curse of blindness")][1] <= 0)):
            print("You look around, You are around "+identify(world[x][y]))
        else:
            print("You are blind,")
     elif(a=="DEBUG"):
+       DEBUGRUN(1,"'DEBUG' Registered")
        if(len(sections)>1):
            command=" ".join(sections[1:len(sections)])
        else:
@@ -6214,6 +6252,7 @@ while(alive==1):
                print("'"+command+"' is not valid")
                print(error)
     elif(a=="WAIT"):
+       DEBUGRUN(1,"'WAIT' Registered")
        if(len(sections)>1):
           b=" ".join(sections[1:len(sections)])
           b=variableify(b)
@@ -6248,12 +6287,14 @@ while(alive==1):
                     print("You wait for "+hourtowait+" hours")
            passtime(int(hourtowait))
     elif(a=="CRAFT"):
+       DEBUGRUN(1,"'CRAFT' Registered")
        print("You sit down to build")
        Item1 = input("Item 1: ")
        Item2 = input("Item 2: ")
        count = int(valid(input("Count: ")))
        masscraft(Item1,Item2,count)
     elif(a=="USE"):
+       DEBUGRUN(1,"'USE' Registered")
        if(len(sections)>1):
            b=" ".join(sections[1:len(sections)])
            useitem=variableify(b)
@@ -7429,6 +7470,7 @@ while(alive==1):
     else:
        print("What you typed was not a command, For help say 'ask a command'")
     print()
+DEBUGRUN(1,"ENDING MAIN LOOP")
 print()
 getinventory()
 print()
@@ -7491,3 +7533,4 @@ while(special == 1):
     elif(want=="NOTSTOP" or want=="CONTINUE" or want=="NOTEND" or want=="NEVEREND" or want=="NEVAEND"or want=="NEVASTOP"):
         print("BE THAT WAY!!!")
         print("---Memory Wipe Complete---")
+DEBUGRUN(1,"PROGRAM REACHED END POINT")
